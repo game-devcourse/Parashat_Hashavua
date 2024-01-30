@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/OpenScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Rules.unity
+    guid: 25b994236588ce049ba999bdca3e17b6
+  - enabled: 1
     path: Assets/Scenes/AvrahamAndAvimelechWell.unity
     guid: dd6c01b4bad246944bc4c75a10f20937
   - enabled: 1
     path: Assets/Scenes/FinishParasha.unity
     guid: 48161e2bd19b12e4891799d31600474e
-  - enabled: 1
-    path: Assets/Scenes/Rules.unity
-    guid: 25b994236588ce049ba999bdca3e17b6
   m_configObjects: {}
