@@ -1,119 +1,119 @@
-## רכיבים דרמטיים:
+## Dramatic components:
 
-### 1.אתגר:
+### 1. Challenge:
 
-•	אילו כישורים יידרשו כדי לשחק במשחק שלנו?
+• What skills will be required to play our game?
 
--	סקרנות, זיכרון, שימוש במקלדת למען התקדמות "הטיול" בפרשה, תגובה מהירה בהתאם למשימות שהשחקן יקבל, עמידה בזמנים, תחרותיות.
+- Curiosity, memory, using the keyboard for the progress of the "trip" in the case, quick response according to the tasks the player will receive, punctuality, competitiveness.
   
-•	נניח שנרצה לאפשר לשחקן לבחור ידנית, בתחילת המשחק, בין שלוש רמות קושי שונות. מה בדיוק ישתנה במשחק שלנו בין רמה לרמה?(איזה עצמים/מאפיינים ישתנו?)
+• Suppose we want to allow the player to manually choose, at the beginning of the game, between three different difficulty levels. What exactly will change in our game between levels? (What objects/characteristics will change?)
 
--	במשחק שלנו, פרשת השבוע, השחקן חווה, מטייל ומרגיש את הפרשה ומבצע משימות בהתאם להתפתחות הפרשה וצובר נק' בהתאם לביצוע משימותיו. אין שלבים ברורים במשחק שלנו וכל משחק = לפרשה ונפתח כל שבוע בהתאם לפרשה. נדאג שהמשימות יעלו כל פעם דרגת קושי בהתאם לדמויות החדשות או המצב החדש שנגלה בהתאם לפרשה. 
+- In our game, the Parsha of the week, the player experiences, travels and feels the Parsha and performs tasks according to the development of the Parsha and accumulates points according to the performance of his tasks. There are no clear stages in our game and each game = a case and will be opened every week according to the case. We will make sure that the tasks will increase in difficulty each time according to the new characters or the new situation that will be discovered according to the case.
 
-•	נניח שנרצה לשנות את רמת הקושי באופן דינמי לפי התקדמות השחקן. איך המשחק שלנו יזהה את רמת המיומנות של השחקן ויתאים את רמת הקושי בהתאם?
+• Suppose we want to change the difficulty level dynamically according to the player's progress. How will our game detect the skill level of the player and adjust the difficulty level accordingly?
 
--	הרמת קושי עולה בהתאם להתקדמות העלילה כלומר לפי התקדמות השחקן בעלילה והיא קבועה מראש, כלומר הרמת קושי לא משתנה לפי רמת מיומנות השחקן.
+- The level of difficulty increases according to the progress of the plot, i.e. according to the progress of the player in the plot and it is predetermined, which means that the level of difficulty does not change according to the skill level of the player.
 
-### 2.זרימה:
+### 2. Flow:
 
-•	איך תמקדו את תשומת הלב של השחקן במשחק ותמנעו הסחות דעת?
+• How will you focus the player's attention on the game and avoid distractions?
 
--	בתחתית צג המשחק כתוב במילים – אמירות בין דמויות, הסבר משימות, תוצאות, איזורים חדשים שאליהם השחקן הגיע.
+- At the bottom of the game monitor is written words - statements between characters, explanation of tasks, results, new areas the player has reached.
   
-•	איך תתנו לשחקן תחושה שהוא שולט במשחק ושהפעולות שלו משפיעות?
+• How will you give the player a feeling that he controls the game and that his actions have an impact?
 
--	תהיה לשחקן יד חופשית בהליכה שלו במשחק. בסופו של דבר הוא יוכל להתקדם לפי העלילה כראוי או להתקדם ולדלג על מקומות/משימות אך בסופו של דבר הניקוד שלו ייפגע מזה. השחקן יקבל פידבק במידה והוא ממשיך לפי העלילה ולכן יקפיד על מנת לקבל פידבק חיובי ויידע שהפעולות שלו משפיעות על המשך העלילה. מאחר ואם יסטה מהדרך לא יסיים את הפרשה עם הפריטים/המסלול נכונים.
+- Give the player a free hand in his walk in the game. In the end he will be able to progress according to the plot properly or progress and skip places/quests but in the end his score will suffer from this. The player will receive feedback if he continues according to the plot and will therefore be careful to receive positive feedback and know that his actions affect the continuation of the plot. Because if he deviates from the path, he will not finish the case with the correct items/route.
   
-•	איך תתנו לשחקן משוב על הצלחה או כישלון?
+• How will you give the player feedback on success or failure?
 
-- כאשר השחקן יצלח משימה הוא יקבל פידבק חיובי של כל הכבוד! או כל פידבק אחר. כאשר השחקן ייכשל במשימה הוא הוא יקבל פידבק מחזק ומעודד לנסות שוב!
+- When the player succeeds in a task, he will receive a positive feedback of congratulations! or any other feedback. When the player fails the task, he will receive reinforcing feedback and encourage him to try again!
  
-### 3.שעשוע:
+### 3. Entertainment:
   
-•	איך המשחק יאפשר לשחקן לעשות דברים נחמדים שאינם קשורים ישירות למטרת המשחק?
+• How will the game allow the player to do nice things that are not directly related to the goal of the game?
 
--	במעבר לסצנה חדשה יהיו דרכים נוספות לצבירת נקודות כגון : ייפתח לוח עם מס' אותיות בודדות וטיימר של 30 שני' ובה השחקן יצטרך להרכיב מהאותיות הנתונות מילה שקשורה לפרשה או משחק זיכרון קצר שבו יישאל על משהו שעבר עד כה בעלילה ותבדוק את הזיכרון הצילומי שלו. אלו שעשועים שאינם קשורים ישירות למשחק אך מוסיפים עניין, מאתגרים ועוד דרך לצבירת נק' בצורה לימודית בלי שהשחקן מבחין בכך.
+- When moving to a new scene, there will be additional ways to accumulate points such as: a board will open with a number of individual letters and a timer of 30 seconds in which the player will have to form a word related to the case from the given letters or a short memory game where he will be asked about something that has happened so far in the plot and you will test his photographic memory. These are amusements that are not directly related to the game but add interest, challenges and another way to accumulate points in an educational way without the player noticing it.
   
-•	לאיזה סוגי שחקנים (מבין הסוגים שלמדנו בשיעור, או סוגים אחרים) המשחק אמור להתאים?
+• What types of players (from the types we studied in class, or other types) should the game be suitable for?
 
--סוגי השחקנים שלהם המשחק אמור להתאים:
+-The types of players the game should fit:
 
--התחרותי-משחק כדי להיות טוב יותר מאחרים כלומר שיסיים את העלילה מוקדם מחבריו ויצבור הכי הרבה נק'.
+-The competitive-plays to be better than others i.e. to finish the plot before his friends and gain the most points.
   
--הסייר- סקרן לגלות את העולם של אותה פרשה, לפגוש את הדמויות, מחפש הרפתקאות.
+-The Explorer- Curious to discover the world of that affair, to meet the characters, looking for adventure.
   
--ההישגי- כמו התחרותי משחק כדי להתקדם לרמות הישג הולכות וגדלות.
+-The achiever- like the competitive play to advance to increasing levels of achievement.
 
--ליצן- המשחק גם מתאים לשחקנים אשר לא לוקחים את המשחק ברצינות וסתם מתקדמים להם בעלילה בלי לצבור נק' , סיום משימות אבל המטרה עדיין תושג כי הם עדיין יחוו את הפרשה גם אם לא היה להם אכפת מהמשחק מלכתחילה.
+-Clown- The game is also suitable for players who don't take the game seriously and just progress through the plot without gaining points, completing tasks but the goal will still be achieved because they will still experience the affair even if they didn't care about the game in the first place.
 
-•	מה אתם יכולים לעשות כדי שהמשחק יתאים לסוגי- שחקנים נוספים?
+• What can you do to make the game suitable for other types of players?
 
--אנחנו יכולות להשקיע בעיצוב ברמה גבוהה ואז האמן יהיה עוד סוג שחקן שהמשחק יוכל להתאים לו.
+- We can invest in a high level design and then the artist will be another type of player that the game can adapt to.
   
--אולי ניתן לשחקן יכולת לבחור רנדומלית את הפתח לסצנות הבאות בלי שהוא בעצמו יידע גם לאן הוא נכנס וכך סוג השחקן מספר הסיפורים – אשר אוהב לחיות בפנטזיה ודימיון / ליצור, גם יהיה מותאם למשחק.
+-Perhaps the player will be given the ability to randomly choose the entrance to the following scenes without him himself even knowing where he is entering and thus the type of player who tells stories - who likes to live in fantasy and imagination / create, will also be adapted to the game.
   
-### 4.רגשות:
- 	
-•	אילו רגשות אתם מצפים שהשחקן ירגיש תוך כדי משחק?
+### 4. Emotions:
+ 
+• What emotions do you expect the player to feel while playing?
 
--	אנחנו מצפות שכל משחק יציף רגשות שונים אצל השחקן כי כל עלילה שונה מפרשה לפרשה חלקן מתארות סצנות מפחידות, מאתגרות, חלקן הגיוניות ולגיטימיות חלקן מציפות שמחה לאיד או התפעלות, או שמחה ואושר אמיתי. אנחנו מצפות שכל משחק יציף בשחקן את ההרגשה שלנו כשקראנו את הפרשה.
+- We expect that each game will flood the player with different emotions because each plot is different from chapter to chapter. Some describe scary, challenging scenes, some are logical and legitimate, some fill the air with joy or admiration, or true joy and happiness. We expect each game to fill the player with the feeling we had when we read the story.
   
-•	איך עיצוב המשחק שלכם יתרום ליצירת רגשות אלה?
+• How will your game design contribute to creating these feelings?
 
-- עיצוב המשחק יכול לזרז את חווית השחקן ו"לזרוק" אותו היישר לאותה תקופה דבר המחזק את ההרגשה החיה של השחקן כאילו הוא עצמו חי באותה תקופה מדוברת.
+- The design of the game can speed up the player's experience and "throw" him straight into that period, which reinforces the vivid feeling of the player as if he himself lived in that spoken period.
   
-### 5.סיפור-רקע:
+### 5.Backstory:
   
-•	מהו הרקע העלילתי של המשחק – מה קרה לפני שהמשחק התחיל?
+• What is the plot background of the game - what happened before the game started?
 
--	רקע העלילתי של המשחק הינו תזכורת מסוף הפרשה הקודמת אם זה פרשה בהמשכים. או פתיחת אותה פרשה במידה והיא מתחילה סיפור חדש. ואז בנק' מסוימת השחק משתלב עם העלילה וממשיך לטייל ולחוות את ההמשך.
+- The plot background of the game is a reminder of the end of the previous episode if it is an episode in the sequels. Or opening the same case if it starts a new story. And then at a certain point the game integrates with the plot and continues to travel and experience the sequel.
   
-•	איך תעבירו לשחקן את סיפור הרקע הזה?
+• How will you convey this background story to the player?
 
-- כפי שנאמר הנ"ל יהיה בתחתית צג המשחק מקום שבו יהיה כתוב דברים והשחקן יהיה מוכרח לעקוב.
+- As said above, there will be a place at the bottom of the game screen where things will be written and the player will have to follow.
   
-### 6.דמויות:מי יהיו הדמויות במשחק?
+### 6. Characters: Who will be the characters in the game?
   
-•	דמויות מרכזיות – מי יהיה ה"גיבור" ומי ה"מתנגד" בעיקרי?
+• Main characters - who will be the "hero" and who will be the main "antagonist"?
 
--	בכל פרשה ופרשה הדמויות משתנות בכל פרשה יש גיבור אחר וזה תמיד השחקן.לדוגמה, בספר בראשית 4 הפרשות האחרונות מתאורות את סיפור יוסף ואחיו ויוסף הוא הגיבור שלנו , כאשרר תפקיד המתנגד משתנה מפעם לפעם בהתחלה זה האחים שלו, ואז זה פרעה.
+- In each episode the characters change in each episode there is a different hero and it is always the actor. For example, in the book of Genesis 4 the last episodes describe the story of Joseph and his brothers and Joseph is our hero, as the role of the antagonist changes from time to time at first it is his brothers, then it is Pharaoh.
   
-•	דמויות משניות – מי הן יהיו, ומה כל אחת תוסיף לחוויית השחקן?
+• Secondary characters - who will they be, and what will each one add to the player's experience?
 
--	הדמויות המשניות גם הן משתנות מפרשה לפרשה הן מוסיפות לחווית השחקן – את ההרגשה שהם באמת בעולם התנ"ך , הם אולי מכוונות להמשך הדרך. לדוג' – בפרשה שהזכרתי הנ"ל האחים הם הדמויות המשניות והם בעצם גרמו לכל הסיפור הזה להתגלגל בכך שקינאו כל כך ביוסף וניסו להיפטר ממנו וכאן יש עולם שלם לספר וללמוד ממנו.
+- The secondary characters also change from episode to episode, they add to the player's experience - the feeling that they are really in the world of the Bible, they may be aiming for the rest of the way. For Doge - in the episode I mentioned above, the brothers are the secondary characters and they actually caused this whole story to unfold by being jealous of all This is the case with Yosef and they tried to get rid of him and here there is a whole world to tell and learn from him.
   
-•	איך הדמויות ישתנו במהלך המשחק?
+• How will the characters change during the game?
 
--	הם ישתנו בהתאם לפרשה, בנראות, בגילם במעשיהם.
+- They will change according to the case, in appearance, in their age and in their actions.
   
-•	האם הדמויות יתנהגו באופן המזכיר "רצון חופשי"?
+• Will the characters behave in a way reminiscent of "free will"?
 
--	אם תהיה דמות אשר תתנהג כך כן, אך לרוב לא.
+- If there is a character who behaves like this yes, but mostly no.
   
-### 7. עלילה:
- 	
-•	איך תיראה הקשת הדרמטית של המשחק שלנו? – 
+### 7. Plot:
+ 
+• What will the dramatic arc of our game look like? –
 
-![גרף קשת דרמטית](https://github.com/game-devcourse/Parashat_Hashavua/assets/86705118/21d21ee1-d256-4868-93e3-1d782fe34735)
+![Dramatic Rainbow Graph](https://github.com/game-devcourse/Parashat_Hashavua/assets/86705118/21d21ee1-d256-4868-93e3-1d782fe34735)
 
 
--	הקשת הדרמטית תהיה עלילת סיפורי התנ"ך- כלומר יהיו מס' עלילות בהתאם לפרשה ומי שמכיר יודעת שהפרשות מעניינות ומלאות דרמה.
+- The dramatic arc will be the plot of the Bible stories - that is, there will be a number of plots depending on the episode and those who know it know that the episodes are interesting and full of drama.
   
-•	מה תהיה העלילה, ואיך היא תשתנה בהתאם לקשת הדרמטית?
+• What will the plot be, and how will it change according to the dramatic arc?
 
--	העלילה כבר אמרנו היא עלילה הידועה מראש – עלילת פרשת השבוע.
+- The plot, we have already said, is a plot that is known in advance - the plot of Parshat HaShavu.
   
-•	איך התנהגות השחקן תשפיע על התפתחות העלילה?
+• How will the actor's behavior affect the development of the plot?
 
--  התפתחות השחקן היא הקובעת את המשך העלילה, האם השחקן ימלא את כל הצעדים וישלים את הפרשה או יאבד חלקים באמצע?
+- The player's development determines the continuation of the plot, will the player complete all the steps and complete the story or will he lose parts in the middle?
   
-### 8.בניית עולם:
+### 8. Building a world:
 
-•	מה יהיה חוקי הטבע, הגיאוגרפיה, ההיסטוריה, הכלכלה, החברה והפוליטיקה בעולם שלנו?
+• What will be the laws of nature, geography, history, economy, society and politics in our world?
 
--	הגיאוגרפיה תשתנה מכיוון שהן משתנות המון בפרשות ולכן העיצוב יהיה בהתאם, החברה משתנה גם היא בהתאם לפרשה – דמויות חדשות, מוות לדמויות קודמות, ילדים שנולדו.
+- The geography will change because they change a lot in the cases and therefore the design will be accordingly, the society also changes according to the case - new characters, death of previous characters, children born.
   
-•	איך השחקן ילמד להכיר את העולם הזה?
+• How will the player get to know this world?
 
--	הוא יתחיל מהכיתוב המתאר את תחילת הפרשה וימשיך לפי ההוראות והתיאורים אשר ילוו אותו עד תום הפרשה.
+- He will start from the caption describing the beginning of the episode and continue according to the instructions and descriptions that will accompany him until the end of the episode.
 
