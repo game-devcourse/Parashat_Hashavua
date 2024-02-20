@@ -301,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368973880}
   - component: {fileID: 368973879}
+  - component: {fileID: 368973881}
   m_Layer: 0
   m_Name: joseph
   m_TagString: Untagged
@@ -376,6 +377,69 @@ Transform:
   - {fileID: 386138479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368973881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368973878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ace867dbe7808c42bc02df517d62f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAction:
+    m_Name: Move
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: e159c7f2-c704-475f-9e82-989bce95ca5e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2DVector
+      m_Id: 6eca98b0-c5eb-4d91-a579-a2db691ba812
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: 21cec67d-8304-4bae-9db3-8bd6b1d3f90d
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: 87b8a9c9-3ec8-446f-972b-be420f328dbd
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: dc493ffb-efb2-4bff-a9d5-0e70ced5e114
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 91a5594a-13a9-4c4a-a3cb-00989d755f08
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  tilemap: {fileID: 2058217136}
+  allowedTiles: {fileID: 1044550844}
 --- !u!1 &386138476
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +501,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.4646854
+  orthographic size: 4.3015513
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -462,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 386138476}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 5, z: -10}
+  m_LocalPosition: {x: 0.22, y: 8.44, z: -10}
   m_LocalScale: {x: 1.030463, y: 1.0876808, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
