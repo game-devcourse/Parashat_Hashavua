@@ -12,6 +12,8 @@ public class DialoguePoint
     public bool isDone = false;
 }
 
+//this script was alternate from the script of Ofek Rotem and Yoni Tal
+//https://github.com/Mishakim-Lamahshev/Avatar-Shadows-Of-Harmony/blob/main/Assets/Scripts/TutorialNPC.cs
 public class TutorialNPC : TargetMover
 {
     [SerializeField] TextMeshProUGUI dialogueText;
