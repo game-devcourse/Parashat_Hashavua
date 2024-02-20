@@ -8,30 +8,35 @@ public class Catch : MonoBehaviour
     [SerializeField] string catchTag;
     private bool isCatching = true;
     private bool canCatch = false;
+    private bool hasCollided = false; // Flag to track if a collision has occurred
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(canCatch)
+        if (canCatch && !hasCollided) // Check if catching is enabled and no collision has occurred yet
         {
             if (other.tag == catchTag)
             {
                 // Destroy the current object
                 Destroy(other.gameObject);
 
-                //after catching the object disable the catching state
+                // After catching the object, disable further catching and collision detection
                 isCatching = false;
+                hasCollided = true;
+
+                // Disable collider to prevent further collisions
+                GetComponent<Collider2D>().enabled = false;
             }
         }
     }
 
-    //returning the catching state
-    public bool getCatchingState()
+    // Returning the catching state
+    public bool GetCatchingState()
     {
         return isCatching;
     }
 
-    //setting the can catch option
-    public void setCanCatch(bool change)
+    // Setting the can catch option
+    public void SetCanCatch(bool change)
     {
         canCatch = change;
     }

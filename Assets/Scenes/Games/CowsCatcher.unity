@@ -2560,6 +2560,7 @@ MonoBehaviour:
   - {fileID: 631131217}
   - {fileID: 1768258468}
   - {fileID: 1298055333}
+  sceneName: WakeUpScene1
 --- !u!1 &1486517510
 GameObject:
   m_ObjectHideFlags: 0
