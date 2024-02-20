@@ -12,7 +12,7 @@
 
 וכל זאת לא מלשמוע סיפורים אלא צלילה עמוקה לעולם התנכ"י.
 
-[למשחק]([https://edenxhadar.itch.io/parashathashavua](https://edenxhadar.itch.io/openingparasha)https://edenxhadar.itch.io/openingparasha)
+[למשחק](https://edenxhadar.itch.io/openingparasha)
 
 
 
