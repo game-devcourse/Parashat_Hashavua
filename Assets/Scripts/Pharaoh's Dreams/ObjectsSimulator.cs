@@ -7,6 +7,7 @@ public class ObjectsSimulate : MonoBehaviour
 {
     [SerializeField] GameObject[] Objects; // Array to hold the object
     [SerializeField] string sceneName; //the scene we want to move to once the player wins the game(aka catches all the objects)
+    [SerializeField] Timer timer;
 
     private int currentObjectIndex = 0; // Index to track the current object
     private GameObject currentObject;
@@ -23,6 +24,7 @@ public class ObjectsSimulate : MonoBehaviour
             Objects[i].GetComponent<KeyboardMoverByTile>().enabled = false;
             Objects[i].GetComponent<Catch>().SetCanCatch(false);
         }
+        timer.startState();
     }
 
     private void switchObject()

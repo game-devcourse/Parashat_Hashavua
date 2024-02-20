@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Opening Scenes/Current Parasha.unity
     guid: eac63a42ec2f92e43bc0b5fbf37f476e
-  - enabled: 0
-    path: Assets/Scenes/Transitional scenes/EnteringGail.unity
-    guid: 86bc3ffbe6f332f43a4c15df8bfe81c9
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/AtThePalace/EnteringGail.unity
+    guid: a3f9897cf9ecc864cbe926f6675e73af
   - enabled: 1
     path: Assets/Scenes/Transitional scenes/Pharaoh's Dreams/Pharaoh'sFirstDream.unity
     guid: 064c5069a73d9ed4cba6cce76d417e76
