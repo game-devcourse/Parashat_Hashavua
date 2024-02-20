@@ -22,13 +22,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("starting dialogie");
 
-        sentences.Clear(); //in order to make sure the queue is empty when starting a new dialogue
-
-        //sentences.Clear(); //each time we start a new dialogue we want to make sure the queue is empty
-        if(sentences.Count > 0)
-        {
-            DisplayNextSentence();
-        }
+        sentences.Clear(); //each time we start a new dialogue we want to make sure the queue is empty
 
         //enter the lines one by one into the queue
         foreach(DialogueLine line in dialogue.dialogueLines)

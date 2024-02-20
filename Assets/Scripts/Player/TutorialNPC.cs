@@ -4,12 +4,20 @@ using System.Collections;
 using UnityEngine.InputSystem;
 using TMPro;
 
+[System.Serializable]
+public class DialoguePoint
+{
+    public Transform point;
+    public string sentence;
+    public bool isDone = false;
+}
+
 public class TutorialNPC : TargetMover
 {
-    public Transform[] pointsOfInterest;
-    public string[] dialogue;
-    public TextMeshProUGUI dialogueText;
-    private bool[] doneExplanations;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    
+    [SerializeField] DialoguePoint[] dialoguePoints;
+
     private int currentPoint = 0;
     private bool isExplaining = false;
 
@@ -19,12 +27,7 @@ public class TutorialNPC : TargetMover
 
     void Start()
     {
-        doneExplanations = new bool[pointsOfInterest.Length];
-        for(int i=0; i<doneExplanations.Length; i++)
-        {
-            doneExplanations[i] = false;
-        }
-        SetTarget(pointsOfInterest[currentPoint].position);
+        SetTarget(dialoguePoints[currentPoint].point.position);
         continueButton.Enable();
         base.Start();
     }
@@ -41,9 +44,9 @@ public class TutorialNPC : TargetMover
 
     void Update()
     {
-        for (int i = 0; i < pointsOfInterest.Length; i++)
+        for (int i = 0; i < dialoguePoints.Length; i++)
         {
-            if (!isExplaining && Vector3.Distance(transform.position, pointsOfInterest[i].position) <= 8f && !doneExplanations[i])
+            if (!isExplaining && Vector3.Distance(transform.position, dialoguePoints[i].point.position) <= 8f && !dialoguePoints[i].isDone)
             {
                 StartCoroutine(ShowPlayerExplanation(i));
                 break; // Exit the loop to ensure only one explanation starts.
@@ -55,25 +58,24 @@ public class TutorialNPC : TargetMover
     {
         isExplaining = true;
         dialogueText.text = ""; // Clear previous text
-        foreach (char letter in dialogue[pointIndex].ToCharArray())
+        foreach (char letter in dialoguePoints[pointIndex].sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(0.1f);
         }
 
+        dialoguePoints[pointIndex].isDone = true;
+        yield return new WaitForSeconds(2f);
         isExplaining = false;
-        doneExplanations[pointIndex] = true;
-        yield return new WaitUntil(() => continueButton.triggered);
-        dialogueText.text = ""; // Clear text after explanations
         MoveToNextPoint();
     }
 
     void MoveToNextPoint()
     {
-        if (currentPoint < pointsOfInterest.Length - 1)
+        if (currentPoint < dialoguePoints.Length - 1)
         {
             currentPoint++;
-            SetTarget(pointsOfInterest[currentPoint].position);
+            SetTarget(dialoguePoints[currentPoint].point.position);
         }
     }
 }

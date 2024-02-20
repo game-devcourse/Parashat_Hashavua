@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameMusic
+  - ThinCow
+  - FatCow
+  - Joseph
   layers:
   - Default
   - TransparentFX
