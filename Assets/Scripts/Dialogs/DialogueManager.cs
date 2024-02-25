@@ -39,46 +39,27 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        //each time before we want to display the next sentence we want to check if the sentence that is now displaying has an event to do
         if(lineToDisplay != null)
         {
+            //in the new scene event we just load the scene that is giving to us from the unity controller
             if(lineToDisplay.dialogEvent.eventType == "New Scene")
             {
-                SceneManager.LoadScene(lineToDisplay.dialogEvent.sceneName);
+                NewSceneEvent();
             }
 
+            //in end conversation event we want to stop displaying the conversation and disable the component responsible for
+            //displaying the next sentence so that if the player will press the key for the next sentence it won't do anything.
             if(lineToDisplay.dialogEvent.eventType == "End Conversation")
             {
-                GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
-                // Get the component type based on its name
-                Type componentType = Type.GetType(lineToDisplay.dialogEvent.componentName);
-                if (componentType != null)
-                {
-                    // Get the component from the objectComponent
-                    Component component = objectComponent.GetComponent(componentType);
-                    if (component != null && component is Behaviour)
-                    {
-                        // Enable or disable the component
-                        (component as Behaviour).enabled = false; // Or true to enable it
-                    }
-                    else
-                    {
-                        Debug.LogWarning("Component not found or is not a Behaviour: " + lineToDisplay.dialogEvent.componentName);
-                    }
-                }
-                else
-                {
-                    Debug.LogWarning("Component type not found: " + lineToDisplay.dialogEvent.componentName);
-                }
-                lineToDisplay = null;
-                EnableDialogue();
-                Debug.Log(sentences.Count);
+                EndConversationEvent();
                 return;
             }
 
+            //in Disable Component event we just want to disable the component giving us from the unity controller
             if(lineToDisplay.dialogEvent.eventType == "Disable Component")
             {
-                GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
-                (objectComponent.GetComponent(lineToDisplay.dialogEvent.componentName) as Behaviour).enabled = false;
+                DisableComponentEvent();
             }
         }
 
@@ -101,6 +82,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+        //we use the IEnumerator so we can use the WaitForSeconds so we can display the letters one by one
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
@@ -122,4 +104,46 @@ public class DialogueManager : MonoBehaviour
         scrol.enabled  = true;
     }
 
+    public void UnDisplayScrol()
+    {
+        scrol.enabled = false;
+    }
+
+    private void NewSceneEvent()
+    {
+        SceneManager.LoadScene(lineToDisplay.dialogEvent.sceneName);
+    }
+
+    private void EndConversationEvent()
+    {
+        GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
+        // Get the component type based on its name
+        Type componentType = Type.GetType(lineToDisplay.dialogEvent.componentName);
+        if (componentType != null)
+        {
+            // Get the component from the objectComponent
+            Component component = objectComponent.GetComponent(componentType);
+            if (component != null && component is Behaviour)
+            {
+                // Enable or disable the component
+                (component as Behaviour).enabled = false; // Or true to enable it
+            }
+            else
+            {
+                Debug.LogWarning("Component not found or is not a Behaviour: " + lineToDisplay.dialogEvent.componentName);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Component type not found: " + lineToDisplay.dialogEvent.componentName);
+        }
+        lineToDisplay = null;
+        EnableDialogue();
+    }
+
+    private void DisableComponentEvent()
+    {
+        GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
+        (objectComponent.GetComponent(lineToDisplay.dialogEvent.componentName) as Behaviour).enabled = false;
+    }
 }

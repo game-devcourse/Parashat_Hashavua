@@ -8,6 +8,8 @@ public class ObjectsSimulate : MonoBehaviour
     [SerializeField] GameObject[] Objects; // Array to hold the object
     [SerializeField] string sceneName; //the scene we want to move to once the player wins the game(aka catches all the objects)
     [SerializeField] Timer timer;
+    [SerializeField] GameObject coinManager;
+    [SerializeField] GameObject winText;
 
     private int currentObjectIndex = 0; // Index to track the current object
     private GameObject currentObject;
@@ -15,6 +17,7 @@ public class ObjectsSimulate : MonoBehaviour
 
     private void Start()
     {
+        winText.SetActive(false);
         objectsLeft = Objects.Length;
         currentObject = Objects[currentObjectIndex]; //Instantiate(Objects[currentObjectIndex], transform.position, Quaternion.identity);
         currentObject.GetComponent<KeyboardMoverByTile>().enabled = true;
@@ -56,7 +59,20 @@ public class ObjectsSimulate : MonoBehaviour
     {
         if(objectsLeft == 0)
         {
-            SceneManager.LoadScene(sceneName);
+            timer.stopTime();
+            // Check if coinManager is null before accessing its components
+            if (coinManager != null) {
+                Debug.Log("the coin manager isnt null");
+                coinManager.GetComponent<CoinsManager>().AddNumber(20);
+            } else {
+                Debug.LogWarning("coinManager is not assigned.");
+            }
+            winText.SetActive(true); //we want to display a win msg for the player
+            /**
+            *after trying to run the game without this next line we saw that it just keep on running because of the Update
+            *and then the coins just keep growing, so we decide to disable the component when the player win.
+            **/
+            GetComponent<ObjectsSimulate>().enabled = false;
         } 
         if(!currentObject.GetComponent<Catch>().GetCatchingState() && !(currentObjectIndex == Objects.Length))
         { 

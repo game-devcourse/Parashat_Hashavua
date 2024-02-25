@@ -8,7 +8,7 @@ using TMPro;
 public class DialoguePoint
 {
     public Transform point;
-    public string sentence;
+    public string[] sentences;
     public bool isDone = false;
 }
 
@@ -60,14 +60,18 @@ public class TutorialNPC : TargetMover
     {
         isExplaining = true;
         dialogueText.text = ""; // Clear previous text
-        foreach (char letter in dialoguePoints[pointIndex].sentence.ToCharArray())
+        foreach(string sentence in dialoguePoints[pointIndex].sentences)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(0.1f);
+            foreach (char letter in sentence.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(0.1f);
+            }
+            dialogueText.text += "\n";
+            yield return new WaitForSeconds(2f);
         }
 
         dialoguePoints[pointIndex].isDone = true;
-        yield return new WaitForSeconds(2f);
         isExplaining = false;
         MoveToNextPoint();
     }

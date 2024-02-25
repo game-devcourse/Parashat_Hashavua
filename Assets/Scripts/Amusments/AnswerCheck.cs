@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AnswerCheck : MonoBehaviour
 {
-
+    [SerializeField] GameObject coinManager;
     public string answer_string;
     private string field_in;
 
@@ -21,8 +21,14 @@ public class AnswerCheck : MonoBehaviour
         bool ans = answer_string.Equals(input);
         if(ans){
             Debug.Log("Correct");
-            
             goodjob.gameObject.SetActive(true);
+            
+            // Check if coinManager is null before accessing its components
+            if (coinManager != null) {
+                coinManager.GetComponent<CoinsManager>().AddNumber(10);
+            } else {
+                Debug.LogWarning("coinManager is not assigned.");
+            }
         }
         else
         {

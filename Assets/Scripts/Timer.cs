@@ -21,6 +21,11 @@ public class Timer : MonoBehaviour
         canStart = true;
     }
 
+    public void stopTime()
+    {
+        canStart = false;
+    }
+
     void Update()
     {
         if(canStart)

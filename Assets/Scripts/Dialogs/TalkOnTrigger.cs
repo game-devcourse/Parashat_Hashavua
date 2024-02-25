@@ -13,4 +13,12 @@ public class TalkOnTrigger : MonoBehaviour
             targetObject.GetComponent<StartTalking>().Enable();
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == triggerTag) {
+            targetObject.GetComponent<StartTalking>().enabled = false;
+            targetObject.GetComponent<StartTalking>().Disable();
+        }
+    }
 }
