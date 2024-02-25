@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1342690731}
   dialogueText: {fileID: 334796198}
+  scrol: {fileID: 0}
 --- !u!4 &6583389
 Transform:
   m_ObjectHideFlags: 0
@@ -601,8 +602,11 @@ MonoBehaviour:
     dialogueLines:
     - name: 
       sentence: "\u05D0\u05E0\u05D9 \u05DC\u05D0 \u05DE\u05D1\u05D9\u05DF"
-      enterScene: OatsCatcher
-      exitScene: GoingOutOfGail
+      dialogEvent:
+        eventType: New Scene
+        sceneName: GoingOutOfGail
+        objectComponent: 
+        componentName: 
 --- !u!114 &585175701
 MonoBehaviour:
   m_ObjectHideFlags: 0

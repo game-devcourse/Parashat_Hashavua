@@ -9,14 +9,24 @@ public class DialogueLine
     public string name;
     public string sentence; //to hold the sentence we want to display
     /**
-    *this next parameters are for a scene that needs to be display multipule times each time with a different sentenct
-    *so we want to keep the previous scene in which we entered from to the current one
-    *and the other one is the next scene to wich we want to enter after the current one.
-    *and in general each dialogue line can hold both of them only one or none if it hold the exitScene it means that after this 
-    *line there should be transition to another scene if it dosen't hold the exitScene it means that we need to continue the conversation.
+    *this next parameter is to manage what will happen after the this dialogue(line) will finish, we are using in tuple so we can
+    *manage events that needs to activate other thing.
+    *the options are:
+    **<"End Conversation", component> - we want to get a component to disable, this option is meant to be for ending conversation temporarly.
+    *<"New Scene">, "sceneName">
+    *<"Disable Component", component>
+    *We decide to make the type as an object so we can get verious types such as components, string, game object etc.
     **/
-    public string enterScene; 
-    public string exitScene;
+    public DialogueEvent dialogEvent;
+}
+
+[System.Serializable]
+public class DialogueEvent
+{
+    public string eventType;
+    public string sceneName;
+    public string objectComponent;
+    public string componentName;
 }
 
 //a dialogue object to hold all the lines

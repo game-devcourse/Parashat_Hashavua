@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class starTalking : MonoBehaviour
+public class StartTalking : MonoBehaviour
 {
     [SerializeField] InputAction nextSentence = new InputAction(type: InputActionType.Button);
     [SerializeField] DialogueTrigger dialogue;
     [SerializeField] DialogueManager dialogueManager;
+    private bool canTalk = true;
 
     void OnEnable()
     {
@@ -19,6 +20,17 @@ public class starTalking : MonoBehaviour
         nextSentence.Disable();
     }
 
+    public void Enable()
+    {
+        canTalk = true;
+        dialogueManager.displayScrol();
+    }
+
+    public void Disable()
+    {
+        canTalk = false;
+    }
+
     void Start()
     {
         dialogue.TriggerDialogue();
@@ -26,7 +38,7 @@ public class starTalking : MonoBehaviour
 
     void Update()
     {
-        if (nextSentence.WasPressedThisFrame()) 
+        if (nextSentence.WasPressedThisFrame() && canTalk) 
         {
             dialogueManager.DisplayNextSentence();
         }
