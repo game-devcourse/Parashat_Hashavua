@@ -29,6 +29,7 @@ public class StartTalking : MonoBehaviour
     public void Disable()
     {
         canTalk = false;
+        dialogueManager.UnDisplayScrol();
     }
 
     void Start()

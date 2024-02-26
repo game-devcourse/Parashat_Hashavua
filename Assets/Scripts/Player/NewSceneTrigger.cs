@@ -7,9 +7,20 @@ public class NewSceneTrigger : MonoBehaviour
 {
     [SerializeField] string sceneName;
     [SerializeField] string triggerTag;
+    [SerializeField] GameObject coinManager;
+    [SerializeField] bool isGame;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == triggerTag) {
+            if(isGame)
+            {
+                // Check if coinManager is null before accessing its components
+                if (coinManager != null) {
+                    coinManager.GetComponent<CoinsManager>().AddNumber(20);
+                } else {
+                    Debug.LogWarning("coinManager is not assigned.");
+                }
+            }
             SceneManager.LoadScene(sceneName);
         }
     }
