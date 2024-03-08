@@ -9,6 +9,8 @@ public class KeyboardMover : MonoBehaviour {
 
     [SerializeField] InputAction moveAction;
 
+    private float rotationWay;
+
     void OnValidate() {
         // Provide default bindings for the input actions.
         // Based on answer by DMGregory: https://gamedev.stackexchange.com/a/205345/18261
@@ -30,17 +32,28 @@ public class KeyboardMover : MonoBehaviour {
         moveAction.Disable();
     }
 
-    protected Vector3 NewPosition() {
+    protected (Vector3, float) NewPosition() {
         if (moveAction.WasPerformedThisFrame()) {
             Vector3 movement = moveAction.ReadValue<Vector2>(); // Implicitly convert Vector2 to Vector3, setting z=0.
-            return transform.position + movement;
+            return (transform.position + movement, movement.x);
         } else {
-            return transform.position;
+            return (transform.position, rotationWay);
         }
     }
 
 
     void Update()  {
-        transform.position = NewPosition();
+        var positionOut = NewPosition();
+        transform.position = positionOut.Item1;
+        rotationWay = positionOut.Item2;
+        if (rotationWay > 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f); // Right arrow pressed, set rotation to (0, 0, 0)
+        }
+        else if (rotationWay < 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f); // Left arrow pressed, set rotation to (0, 180, 0)
+        }
+
     }
 }

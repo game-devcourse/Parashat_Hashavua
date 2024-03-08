@@ -15,6 +15,7 @@ public class ObjectsSimulate : MonoBehaviour
     private GameObject currentObject;
     private int objectsLeft;
 
+
     private void Start()
     {
         winText.SetActive(false);
@@ -57,6 +58,15 @@ public class ObjectsSimulate : MonoBehaviour
 
     void Update()
     {
+        if(timer.isOutOfTime)
+        {
+            for(int i=0; i<Objects.Length; i++)
+            {
+                Objects[i].GetComponent<KeyboardMoverByTile>().enabled = false;
+                Objects[i].GetComponent<Catch>().SetCanCatch(false);
+            }
+            GetComponent<ObjectsSimulate>().enabled = false;
+        }
         if(objectsLeft == 0)
         {
             timer.stopTime();
@@ -72,6 +82,11 @@ public class ObjectsSimulate : MonoBehaviour
             *after trying to run the game without this next line we saw that it just keep on running because of the Update
             *and then the coins just keep growing, so we decide to disable the component when the player win.
             **/
+            for(int i=0; i<Objects.Length; i++)
+            {
+                Objects[i].GetComponent<KeyboardMoverByTile>().enabled = false;
+                Objects[i].GetComponent<Catch>().SetCanCatch(false);
+            }
             GetComponent<ObjectsSimulate>().enabled = false;
         } 
         if(!currentObject.GetComponent<Catch>().GetCatchingState() && !(currentObjectIndex == Objects.Length))

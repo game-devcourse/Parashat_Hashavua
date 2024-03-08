@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject gameoverText;
 
     private bool canStart = false;
+    public bool isOutOfTime = false;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class Timer : MonoBehaviour
                 if(remainingTime < 0)
                 {
                     remainingTime = 0;
+                    isOutOfTime = true;
                     timerText.color = Color.red;
                     gameoverText.SetActive(true);
                 }
