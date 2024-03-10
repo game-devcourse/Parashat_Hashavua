@@ -8,6 +8,10 @@ TagManager:
   - ThinCow
   - FatCow
   - Joseph
+  - vayera
+  - ThinOat
+  - wrongItem
+  - correctItem
   layers:
   - Default
   - TransparentFX

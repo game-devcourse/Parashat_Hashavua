@@ -28,11 +28,13 @@ public class KeyboardMoverByTile : KeyboardMover {
             transform.position = newPosition;
             // if (NewPosition().Item2 > 0)
             // {
-            //     transform.rotation = Quaternion.Euler(0f, 0f, 0f); // Right arrow pressed, set rotation to (0, 0, 0)
+            // //     transform.rotation = Quaternion.Euler(0f, 0f, 0f); // Right arrow pressed, set rotation to (0, 0, 0)
+            //     transform.localScale = new Vector3(1,1,1);
             // }
             // else if (NewPosition().Item2 < 0)
             // {
-            //     transform.rotation = Quaternion.Euler(0f, 180f, 0f); // Left arrow pressed, set rotation to (0, 180, 0)
+            // //     transform.rotation = Quaternion.Euler(0f, 180f, 0f); // Left arrow pressed, set rotation to (0, 180, 0)
+            //     transform.localScale = new Vector3(-1,1,1);
             // }
         } else {
             Debug.Log("You cannot walk on " + tileOnNewPosition + "!");

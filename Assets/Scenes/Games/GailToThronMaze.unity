@@ -1103,7 +1103,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
-  tilemap: {fileID: 1842312870}
+  tilemaps: []
   allowedTiles: {fileID: 291762383}
 --- !u!50 &903267169
 Rigidbody2D:
@@ -1619,7 +1619,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Current Parasha
+          m_StringArgument: GailToThronMaze
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1343366973

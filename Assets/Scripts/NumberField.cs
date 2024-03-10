@@ -5,7 +5,7 @@ using UnityEngine;
  * This component should be attached to a TextMeshPro object.
  * It allows to feed an integer number to the text field.
  */
-[RequireComponent(typeof(TextMeshPro))]
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class NumberField : MonoBehaviour {
     private int number;
 
@@ -15,7 +15,7 @@ public class NumberField : MonoBehaviour {
 
     public void SetNumber(int newNumber) {
         this.number = newNumber;
-        GetComponent<TextMeshPro>().text = newNumber.ToString();
+        GetComponent<TextMeshProUGUI>().text = newNumber.ToString();
     }
 
     public void AddNumber(int toAdd) {
