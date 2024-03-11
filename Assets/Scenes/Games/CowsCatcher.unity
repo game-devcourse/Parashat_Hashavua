@@ -903,6 +903,7 @@ MonoBehaviour:
   timerText: {fileID: 582108549}
   remainingTime: 15
   gameoverText: {fileID: 1458646422}
+  isOutOfTime: 0
 --- !u!114 &509096545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3797,7 +3798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2da1d1692d6854288de06da60c0a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ob: {fileID: 1473832478}
+  ob: {fileID: 0}
 --- !u!4 &1788524336
 Transform:
   m_ObjectHideFlags: 0
@@ -9825,7 +9826,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 988d26d14a706fb40b2b34d6f68dcd1b, type: 2}
   m_sharedMaterial: {fileID: -7872481631276212497, guid: 988d26d14a706fb40b2b34d6f68dcd1b, type: 2}

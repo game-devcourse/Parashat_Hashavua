@@ -46,14 +46,13 @@ public class KeyboardMover : MonoBehaviour {
         var positionOut = NewPosition();
         transform.position = positionOut.Item1;
         rotationWay = positionOut.Item2;
-        if (rotationWay > 0)
-        {
-            transform.localScale = new Vector3(1,1,1);
-        }
-        else if (rotationWay < 0)
-        {
-            transform.localScale = new Vector3(-1,1,1);
-        }
-
+        // if (rotationWay > 0)
+        // {
+        //     transform.localScale = new Vector3(1,1,1);
+        // }
+        // else if (rotationWay < 0)
+        // {
+        //     transform.localScale = new Vector3(-1,1,1);
+        // }
     }
 }

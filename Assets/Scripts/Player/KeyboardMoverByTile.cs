@@ -7,16 +7,14 @@ using UnityEngine.Tilemaps;
  * but only if the new position is on an allowed tile.
  */
 public class KeyboardMoverByTile : KeyboardMover {
-    [SerializeField] Tilemap[] tilemaps = null;
+    [SerializeField] Tilemap tilemap = null;
     [SerializeField] AllowedTiles allowedTiles = null;
 
     private TileBase TileOnPosition(Vector3 worldPosition) {
-        foreach (Tilemap tilemap in tilemaps) {
-            Vector3Int cellPosition = tilemap.WorldToCell(worldPosition);
-            TileBase tile = tilemap.GetTile(cellPosition);
-            if (tile != null) {
-                return tile;
-            }
+        Vector3Int cellPosition = tilemap.WorldToCell(worldPosition);
+        TileBase tile = tilemap.GetTile(cellPosition);
+        if (tile != null) {
+            return tile;
         }
         return null;
     }

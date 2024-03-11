@@ -7,7 +7,8 @@ public class NewSceneTrigger : MonoBehaviour
 {
     [SerializeField] string sceneName;
     [SerializeField] string triggerTag;
-    [SerializeField] GameObject coinManager;
+    [SerializeField] GameObject coinManager = null;
+    [Tooltip("If the current scene is a game that should add coins, enable it.")]
     [SerializeField] bool isGame;
 
     private void OnTriggerEnter2D(Collider2D other) {

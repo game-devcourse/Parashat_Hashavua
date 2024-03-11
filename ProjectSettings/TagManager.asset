@@ -12,6 +12,11 @@ TagManager:
   - ThinOat
   - wrongItem
   - correctItem
+  - Brothers
+  - FatOat
+  - FoodBag
+  - RottenFood
+  - FreshFood
   layers:
   - Default
   - TransparentFX

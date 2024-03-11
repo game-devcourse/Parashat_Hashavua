@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartGameController : MonoBehaviour
 {
-    [SerializeField] KeyboardMoverByTile ob;
+    [SerializeField] KeyboardMover ob;
 
     void Start()
     {

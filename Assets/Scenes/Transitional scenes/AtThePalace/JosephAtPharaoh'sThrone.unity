@@ -2036,7 +2036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTag: Joseph
-  targetObject: {fileID: 1390104177}
+  DialogueObject: {fileID: 1390104177}
+  isAllDialogueOnTrigger: 0
 --- !u!50 &1173267442
 Rigidbody2D:
   serializedVersion: 4
@@ -2121,7 +2122,7 @@ GameObject:
   - component: {fileID: 1261279346}
   - component: {fileID: 1261279345}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Scroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
