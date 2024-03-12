@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersAndJacob.unity
     guid: 383f8fd63f09e6a47b88b5dafcffe84b
   - enabled: 1
-    path: Assets/Scenes/Games/FromCnaanToEjyptMaze.unity
+    path: Assets/Scenes/Games/FromCnaanToEgyptMaze.unity
     guid: e216a7031279c03438a3b4c6d99a0398
   - enabled: 1
     path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersMeetJoseph.unity
@@ -77,4 +77,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersGetBenjamin.unity
     guid: 224dbfdb9f6bb5349b3c301e22663b01
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/TheFeast.unity
+    guid: 872e42a4b44407c40a27e837c1797863
+  - enabled: 1
+    path: Assets/Scenes/Games/BuryTheGoblet.unity
+    guid: 7b290e7de4a580b4e99817340b043b87
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/GoBackToCnaan.unity
+    guid: 0a728118ed303aa41a73922035748a1b
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BlamingBenjamin.unity
+    guid: f383311b063419d4598eb87c5f9413e9
   m_configObjects: {}

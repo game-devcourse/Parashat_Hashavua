@@ -7,20 +7,20 @@ using UnityEngine.Tilemaps;
  * This component moves its object towards a given target position.
  */
 public class TargetMover: MonoBehaviour {
-    [SerializeField] Tilemap tilemap = null;
-    [SerializeField] AllowedTiles allowedTiles = null;
+    [SerializeField] protected Tilemap tilemap = null;
+    [SerializeField] protected AllowedTiles allowedTiles = null;
 
     [Tooltip("The speed by which the object moves towards the target, in meters (=grid units) per second")]
     [SerializeField] float speed = 4f;
 
     [Tooltip("Maximum number of iterations before BFS algorithm gives up on finding a path")]
-    [SerializeField] int maxIterations = 1000;
+    [SerializeField] protected int maxIterations = 1000;
 
     [Tooltip("The target position in world coordinates")]
     [SerializeField] Vector3 targetInWorld;
 
     [Tooltip("The target position in grid coordinates")]
-    [SerializeField] Vector3Int targetInGrid;
+    [SerializeField] protected Vector3Int targetInGrid;
 
     protected bool atTarget;  // This property is set to "true" whenever the object has already found the target.
 
@@ -36,8 +36,8 @@ public class TargetMover: MonoBehaviour {
         return targetInWorld;
     }
 
-    private TilemapGraph tilemapGraph = null;
-    private float timeBetweenSteps;
+    protected TilemapGraph tilemapGraph = null;
+    protected float timeBetweenSteps;
 
     protected virtual void Start() {
         tilemapGraph = new TilemapGraph(tilemap, allowedTiles.Get());
@@ -53,11 +53,10 @@ public class TargetMover: MonoBehaviour {
         }
     }
 
-    private void MakeOneStepTowardsTheTarget() {
+    protected void MakeOneStepTowardsTheTarget() {
         Vector3Int startNode = tilemap.WorldToCell(transform.position);
         Vector3Int endNode = targetInGrid;
         List<Vector3Int> shortestPath = BFS.GetPath(tilemapGraph, startNode, endNode, maxIterations);
-        //Debug.Log("shortestPath = " + string.Join(" , ",shortestPath));
         if (shortestPath.Count >= 2) { // shortestPath contains both source and target.
             Vector3Int nextNode = shortestPath[1];
             transform.position = tilemap.GetCellCenterWorld(nextNode);

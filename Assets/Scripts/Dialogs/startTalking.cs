@@ -32,6 +32,17 @@ public class StartTalking : MonoBehaviour
         dialogueManager.UnDisplayScrol();
     }
 
+    public void OptionAnswersEventStart()
+    {
+        canTalk = false; // Disable ability to advance dialogue
+    }
+
+    // Method to handle Option Answers event end
+    public void OptionAnswersEventEnd()
+    {
+        canTalk = true; // Enable ability to advance dialogue
+    }
+
     void Start()
     {
         dialogue.TriggerDialogue();

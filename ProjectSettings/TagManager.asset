@@ -17,6 +17,7 @@ TagManager:
   - FoodBag
   - RottenFood
   - FreshFood
+  - EgyptSoldier
   layers:
   - Default
   - TransparentFX

@@ -75,15 +75,22 @@ public class DialogueManager : MonoBehaviour
             EnableDialogue();
             return;
         }
-
         lineToDisplay = sentences.Dequeue();
+        dialogueText.text = "";
         Debug.Log(lineToDisplay.sentence);
         if(lineToDisplay.name != null)
         {
             nameText.text = lineToDisplay.name;
         }
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(lineToDisplay.sentence));
+        if(lineToDisplay.dialogEvent.eventType == "Option Answers")
+        {
+            OptionChoiceEvent();
+        }
+        else
+        {
+            StartCoroutine(TypeSentence(lineToDisplay.sentence));
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -135,7 +142,7 @@ public class DialogueManager : MonoBehaviour
             if (component != null && component is Behaviour)
             {
                 // Enable or disable the component
-                (component as Behaviour).enabled = false; // Or true to enable it
+                (component as Behaviour).enabled = false;
             }
             else
             {
@@ -158,7 +165,118 @@ public class DialogueManager : MonoBehaviour
 
     private void EnableComponentEvent()
     {
-        GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
-        (objectComponent.GetComponent(lineToDisplay.dialogEvent.componentName) as Behaviour).enabled = true;
+        // Find the GameObject by name
+        GameObject obj = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
+
+        if (obj != null)
+        {
+            // Try to get the component by name
+            Component component = obj.GetComponent(lineToDisplay.dialogEvent.componentName);
+
+            if (component != null)
+            {
+                // Try to get the MethodInfo for the function by name
+                System.Reflection.MethodInfo methodInfo = component.GetType().GetMethod(lineToDisplay.dialogEvent.functionName);
+
+                if (methodInfo != null)
+                {
+                    // Invoke the function on the component
+                    methodInfo.Invoke(component, null);
+                }
+                else
+                {
+                    Debug.LogError("Function not found: " + lineToDisplay.dialogEvent.functionName);
+                }
+            }
+            else
+            {
+                Debug.LogError("Component not found: " + lineToDisplay.dialogEvent.componentName);
+            }
+        }
+        else
+        {
+            Debug.LogError("GameObject not found: " + lineToDisplay.dialogEvent.objectComponent);
+        }
+    }    
+
+    private void OptionChoiceEvent()
+    {
+        FindObjectOfType<StartTalking>().OptionAnswersEventStart();
+        foreach(OptionAnswer answer in lineToDisplay.dialogEvent.myAnswers)
+        {
+            answer.btn.onClick.RemoveAllListeners();
+            answer.btn.GetComponentInChildren<TextMeshProUGUI>().text = answer.txt;
+            answer.btn.interactable = true;
+        }
+
+        foreach (OptionAnswer answer in lineToDisplay.dialogEvent.myAnswers)
+        {
+            // Add a click event handler to the button
+            answer.btn.onClick.AddListener(() => OnButtonClick(answer));
+        }
+    }
+
+    private void OnButtonClick(OptionAnswer answer)
+    {
+        // Determine which button was pressed based on the OptionAnswer object
+        Button pressedButton = answer.btn;
+        string buttonText = answer.txt;
+
+        Debug.Log("Button pressed: " + buttonText);
+
+        // Perform actions based on the pressed button
+        if (answer.isTheRightAnswer)
+        {
+            foreach(OptionAnswer answerO in lineToDisplay.dialogEvent.myAnswers)
+            {
+                answerO.btn.GetComponentInChildren<TextMeshProUGUI>().text = "";
+                answerO.btn.interactable = false;
+            }
+            nameText.text = "";
+            FindObjectOfType<StartTalking>().OptionAnswersEventEnd();
+            // Handle the right answer
+            DisplayNextSentence();
+        }
+        else
+        {
+            // Handle a wrong answer
+            nameText.text = "";
+
+            // Disable buttons temporarily while displaying wrong answer response
+            foreach (OptionAnswer answerO in lineToDisplay.dialogEvent.myAnswers)
+            {
+                answerO.btn.interactable = false;
+            }
+
+            StartCoroutine(DisplayWrongAnswerAndReenableButtons(answer.wrongAnswerResponse));
+        }
+    }
+
+    private IEnumerator DisplayWrongAnswerAndReenableButtons(string wrongAnswerResponse)
+    {
+        dialogueText.text = "";
+        foreach (OptionAnswer answerO in lineToDisplay.dialogEvent.myAnswers)
+        {
+            answerO.btn.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        }
+
+        // Display wrong answer response
+        yield return StartCoroutine(TypeSentence(wrongAnswerResponse));
+
+        // Wait for a while after displaying wrong answer response
+        yield return new WaitForSecondsRealtime(2f);
+
+        dialogueText.text = "";
+        // Reenable buttons after a delay
+        foreach (OptionAnswer answerO in lineToDisplay.dialogEvent.myAnswers)
+        {
+            answerO.btn.GetComponentInChildren<TextMeshProUGUI>().text = answerO.txt;
+            answerO.btn.interactable = true;
+        }
+
+        if(lineToDisplay.name != null)
+        {
+            nameText.text = lineToDisplay.name;
+        }
     }
 }

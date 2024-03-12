@@ -318,7 +318,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.4579945
+  orthographic size: 6.4532804
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -343,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 250395722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.6, y: 9.8, z: -10}
+  m_LocalPosition: {x: -12.21, y: 4.27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8564,6 +8564,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: Dialogue
         componentName: StartTalking
+        myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05DB\u05D5\u05DC\u05DB\u05DD \u05DE\u05E9\u05D5\u05D7\u05E8\u05E8\u05D9\u05DD!
         \u05D7\u05D5\u05E5 \u05DE\u05E9\u05DE\u05E2\u05D5\u05DF \u05E2\u05D3 \u05E9\u05EA\u05D7\u05D6\u05E8\u05D5
@@ -8573,6 +8574,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05D5\u05E7\u05D7\u05D5 \u05DC\u05DB\u05DD \u05D0\u05D5\u05DB\u05DC
         \u05D6\u05D4 \u05D5\u05E9\u05D1\u05E8\u05D5 \u05D0\u05EA \u05D4\u05E8\u05E2\u05D1
@@ -8582,6 +8584,7 @@ MonoBehaviour:
         sceneName: BrothersOutOfGail
         objectComponent: 
         componentName: 
+        myAnswers: []
 --- !u!114 &1075555522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18951,7 +18954,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4b625a2b36b993e4894f1df2e4671bdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5a538dcbfb28f94aaf443c607465dca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -18971,8 +18974,8 @@ Transform:
   m_GameObject: {fileID: 1827844839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.66, y: -5.91, z: 0}
-  m_LocalScale: {x: 0.4593435, y: 0.4057936, z: 1}
+  m_LocalPosition: {x: 5.941, y: -5.0358, z: 0}
+  m_LocalScale: {x: 0.6108217, y: 0.62908405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 250395725}
