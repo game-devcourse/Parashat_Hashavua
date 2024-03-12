@@ -15,6 +15,7 @@ public class DialogueLine
     **<"End Conversation", component> - we want to get a component to disable, this option is meant to be for ending conversation temporarly.
     *<"New Scene">, "sceneName">
     *<"Disable Component", component>
+    *<"Enable Component">,  component>
     *We decide to make the type as an object so we can get verious types such as components, string, game object etc.
     **/
     public DialogueEvent dialogEvent;

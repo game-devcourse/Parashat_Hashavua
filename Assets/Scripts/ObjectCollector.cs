@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ObjectCollector : MonoBehaviour
 {
     [SerializeField] public string triggeringTag;
-    [SerializeField] public NumberField scoreField;
+    [SerializeField] public NumberField scoreField = null;
     [SerializeField] string sceneName;
 
 

@@ -5,20 +5,29 @@ using UnityEngine;
 public class TalkOnTrigger : MonoBehaviour
 {
    [SerializeField] string triggerTag;
-   [SerializeField] GameObject targetObject;
+   [SerializeField] GameObject DialogueObject;
+   [SerializeField] bool isAllDialogueOnTrigger;
 
+    void Awake()
+    {
+        if(isAllDialogueOnTrigger)
+        {
+            DialogueObject.GetComponent<StartTalking>().enabled = false;
+            DialogueObject.GetComponent<StartTalking>().Disable();
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == triggerTag) {
-            targetObject.GetComponent<StartTalking>().enabled = true;
-            targetObject.GetComponent<StartTalking>().Enable();
+            DialogueObject.GetComponent<StartTalking>().enabled = true;
+            DialogueObject.GetComponent<StartTalking>().Enable();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == triggerTag) {
-            targetObject.GetComponent<StartTalking>().enabled = false;
-            targetObject.GetComponent<StartTalking>().Disable();
+            DialogueObject.GetComponent<StartTalking>().enabled = false;
+            DialogueObject.GetComponent<StartTalking>().Disable();
         }
     }
 }

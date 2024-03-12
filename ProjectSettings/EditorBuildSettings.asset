@@ -56,4 +56,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Games/PreparingForHunger.unity
     guid: 3a0ee15b2f9927348aafe0aab90e8eb8
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersAndJacob.unity
+    guid: 383f8fd63f09e6a47b88b5dafcffe84b
+  - enabled: 1
+    path: Assets/Scenes/Games/FromCnaanToEjyptMaze.unity
+    guid: e216a7031279c03438a3b4c6d99a0398
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersMeetJoseph.unity
+    guid: 2777058b40c949740b0925c82a2d06dc
+  - enabled: 1
+    path: Assets/Scenes/Amusments/desertAmusment.unity
+    guid: 5cca3dda3bf62404f9fff188292a4998
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersInGail.unity
+    guid: ca556a76b0bc90b4e8bb896e4aaf62c7
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersOutOfGail.unity
+    guid: ef80fd89b172ece478020cf5205f7765
+  - enabled: 1
+    path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BrothersGetBenjamin.unity
+    guid: 224dbfdb9f6bb5349b3c301e22663b01
   m_configObjects: {}

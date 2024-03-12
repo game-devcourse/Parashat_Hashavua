@@ -61,6 +61,12 @@ public class DialogueManager : MonoBehaviour
             {
                 DisableComponentEvent();
             }
+
+            //in Enable Component event we just want to enable the component giving us from the unity controller
+            if(lineToDisplay.dialogEvent.eventType == "Enable Component")
+            {
+                EnableComponentEvent();
+            }
         }
 
         if(sentences.Count == 0)
@@ -94,6 +100,7 @@ public class DialogueManager : MonoBehaviour
     void EnableDialogue()
     {
         Debug.Log("End of dialogue.");
+        StopAllCoroutines();
         dialogueText.text = "";
         nameText.text = "";
         scrol.enabled = false; 
@@ -107,6 +114,8 @@ public class DialogueManager : MonoBehaviour
     public void UnDisplayScrol()
     {
         scrol.enabled = false;
+        nameText.text = "";
+        dialogueText.text = "";
     }
 
     private void NewSceneEvent()
@@ -145,5 +154,11 @@ public class DialogueManager : MonoBehaviour
     {
         GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
         (objectComponent.GetComponent(lineToDisplay.dialogEvent.componentName) as Behaviour).enabled = false;
+    }
+
+    private void EnableComponentEvent()
+    {
+        GameObject objectComponent = GameObject.Find(lineToDisplay.dialogEvent.objectComponent);
+        (objectComponent.GetComponent(lineToDisplay.dialogEvent.componentName) as Behaviour).enabled = true;
     }
 }

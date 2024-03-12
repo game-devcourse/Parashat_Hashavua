@@ -1103,7 +1103,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
-  tilemaps: []
+  tilemap: {fileID: 1842312870}
   allowedTiles: {fileID: 291762383}
 --- !u!50 &903267169
 Rigidbody2D:
@@ -6157,11 +6157,11 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 615488940}
+  - {fileID: 903267167}
   - {fileID: 652801397}
   - {fileID: 895784618}
   - {fileID: 507037259}
   - {fileID: 1666674727}
-  - {fileID: 615488940}
-  - {fileID: 903267167}
   - {fileID: 1337685452}
   - {fileID: 847351765}

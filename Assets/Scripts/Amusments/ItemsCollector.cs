@@ -10,13 +10,12 @@ public class ItemsCollector : ObjectCollector
     [SerializeField] GameObject coinManager;
     [SerializeField] GameObject winText;
     [SerializeField] GameObject gameoverFalseCollectText;
+    [SerializeField] int coinsWin;
 
     void Start()
     {
         winText.SetActive(false);
         gameoverFalseCollectText.SetActive(false);
-        GetComponent<KeyboardMoverByTile>().enabled = true;
-        timer.startState();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -46,11 +45,11 @@ public class ItemsCollector : ObjectCollector
             // Check if coinManager is null before accessing its components
             if (coinManager != null) {
                 Debug.Log("the coin manager isnt null");
-                coinManager.GetComponent<CoinsManager>().AddNumber(20);
+                coinManager.GetComponent<CoinsManager>().AddNumber(coinsWin);
             } else {
                 Debug.LogWarning("coinManager is not assigned.");
             }
-            GetComponent<KeyboardMoverByTile>().enabled = false;
+            GetComponent<KeyboardMover>().enabled = false;
             timer.stopTime();
         }
     }
