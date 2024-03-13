@@ -40,6 +40,8 @@ public class FoodBagCollector : ObjectCollector
             scrol.enabled = true;
             nameText.text = name;
             dialogueText.text = sentenceToDisplay;
+            WarningOnTrigger componentObject = GameObject.FindObjectsOfType<WarningOnTrigger>(); 
+            componentObject.TurnOffWarnings();
         }
     }
 

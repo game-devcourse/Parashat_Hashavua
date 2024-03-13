@@ -95,20 +95,21 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(TypeSentence(lineToDisplay.sentence));
+            //StartCoroutine(TypeSentence(lineToDisplay.sentence));
+            dialogueText.text = lineToDisplay.sentence;
         }
     }
 
-    IEnumerator TypeSentence(string sentence)
-    {
-        //we use the IEnumerator so we can use the WaitForSeconds so we can display the letters one by one
-        dialogueText.text = "";
-        foreach(char letter in sentence.ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
+    // IEnumerator TypeSentence(string sentence)
+    // {
+    //     //we use the IEnumerator so we can use the WaitForSeconds so we can display the letters one by one
+    //     dialogueText.text = "";
+    //     foreach(char letter in sentence.ToCharArray())
+    //     {
+    //         dialogueText.text += letter;
+    //         yield return new WaitForSeconds(0.001f);
+    //     }
+    // }
 
     void EnableDialogue()
     {
@@ -277,8 +278,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Display wrong answer response
-        yield return StartCoroutine(TypeSentence(wrongAnswerResponse));
-
+        //yield return StartCoroutine(TypeSentence(wrongAnswerResponse));
+        dialogueText.text = wrongAnswerResponse;
+        
         // Wait for a while after displaying wrong answer response
         yield return new WaitForSecondsRealtime(2f);
 

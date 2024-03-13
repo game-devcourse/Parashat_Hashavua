@@ -3799,6 +3799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ob: {fileID: 0}
+  obS: {fileID: 0}
 --- !u!4 &1788524336
 Transform:
   m_ObjectHideFlags: 0
