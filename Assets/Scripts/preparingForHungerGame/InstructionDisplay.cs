@@ -33,4 +33,3 @@ public class InstructionDisplay : MonoBehaviour
         instructionsText.enabled = false;
     }
 }
-

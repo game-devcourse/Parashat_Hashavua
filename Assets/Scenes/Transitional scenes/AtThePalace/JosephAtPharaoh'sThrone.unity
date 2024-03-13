@@ -527,14 +527,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAction:
     m_Name: Move
-    m_Type: 1
+    m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e159c7f2-c704-475f-9e82-989bce95ca5e
+    m_Id: 5acbb6e5-9cae-4048-b5d9-3eaeafc38b2f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 2DVector
-      m_Id: 6eca98b0-c5eb-4d91-a579-a2db691ba812
+      m_Id: 29aed690-31f8-4166-a4e9-ec1431a94291
       m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
@@ -542,7 +542,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 4
     - m_Name: Up
-      m_Id: 21cec67d-8304-4bae-9db3-8bd6b1d3f90d
+      m_Id: 7a0c2a96-559b-4f56-b5c8-5a5e8c40d634
       m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
@@ -550,7 +550,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Down
-      m_Id: 87b8a9c9-3ec8-446f-972b-be420f328dbd
+      m_Id: 530b847e-7290-450f-94de-6b73b338ffef
       m_Path: <Keyboard>/downArrow
       m_Interactions: 
       m_Processors: 
@@ -558,7 +558,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Left
-      m_Id: dc493ffb-efb2-4bff-a9d5-0e70ced5e114
+      m_Id: e8f4e87e-b1fc-4807-88f5-52b0d3c919e4
       m_Path: <Keyboard>/leftArrow
       m_Interactions: 
       m_Processors: 
@@ -566,7 +566,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Right
-      m_Id: 91a5594a-13a9-4c4a-a3cb-00989d755f08
+      m_Id: 26d7be7b-0592-4d77-b066-586a84089778
       m_Path: <Keyboard>/rightArrow
       m_Interactions: 
       m_Processors: 
@@ -602,7 +602,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &368973883
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2843,6 +2843,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: Dialogue
         componentName: StartTalking
+        functionName: 
         myAnswers: []
     - name: "\u05E4\u05E8\u05E2\u05D4"
       sentence: "\u05E9\u05DE\u05E2\u05EA\u05D9 \u05E2\u05DC\u05D9\u05D9\u05DA, \u05D7\u05DC\u05DE\u05EA\u05D9
@@ -2861,6 +2862,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05DE\u05D4 \u05D4\u05E4\u05D9\u05EA\u05E8\u05D5\u05DF \u05E9\u05DC
         \u05D9\u05D5\u05E1\u05E3?"
@@ -2870,6 +2872,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers:
         - btn: {fileID: 1527064408}
           isTheRightAnswer: 1
@@ -2904,6 +2907,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05E4\u05E8\u05E2\u05D4"
       sentence: "\u05DE\u05D4 \u05E2\u05DC\u05D9\u05D9 \u05DC\u05E2\u05E9\u05D5\u05EA?"
@@ -2912,6 +2916,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05DE\u05D4 \u05D9\u05D5\u05E1\u05E3 \u05D9\u05D9\u05E2\u05E5 \u05DC\u05E4\u05E8\u05E2\u05D4?"
       sentence: 
@@ -2920,6 +2925,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers:
         - btn: {fileID: 1527064408}
           isTheRightAnswer: 0
@@ -2948,6 +2954,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05E4\u05E8\u05E2\u05D4"
       sentence: "\u05D0\u05D7\u05E8\u05D9 \u05D4\u05D5\u05D3\u05D9\u05E2 \u05D0\u05DC\u05D5\u05E7\u05D9\u05DD
@@ -2960,6 +2967,7 @@ MonoBehaviour:
         sceneName: PreparingForHunger
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
 --- !u!114 &1390104179
 MonoBehaviour:

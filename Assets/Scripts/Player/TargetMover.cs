@@ -11,7 +11,7 @@ public class TargetMover: MonoBehaviour {
     [SerializeField] protected AllowedTiles allowedTiles = null;
 
     [Tooltip("The speed by which the object moves towards the target, in meters (=grid units) per second")]
-    [SerializeField] float speed = 4f;
+    [SerializeField] protected float speed = 4f;
 
     [Tooltip("Maximum number of iterations before BFS algorithm gives up on finding a path")]
     [SerializeField] protected int maxIterations = 1000;

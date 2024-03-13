@@ -67,6 +67,12 @@ public class DialogueManager : MonoBehaviour
             {
                 EnableComponentEvent();
             }
+
+            //in Attach Objects event we atach the child object to the parent object
+            if(lineToDisplay.dialogEvent.eventType == "Attach Objects")
+            {
+                AttachObjectsEvant();
+            }
         }
 
         if(sentences.Count == 0)
@@ -175,17 +181,27 @@ public class DialogueManager : MonoBehaviour
 
             if (component != null)
             {
-                // Try to get the MethodInfo for the function by name
-                System.Reflection.MethodInfo methodInfo = component.GetType().GetMethod(lineToDisplay.dialogEvent.functionName);
-
-                if (methodInfo != null)
+                if(lineToDisplay.dialogEvent.functionName != null)
                 {
-                    // Invoke the function on the component
-                    methodInfo.Invoke(component, null);
+                    // Try to get the MethodInfo for the function by name
+                    System.Reflection.MethodInfo methodInfo = component.GetType().GetMethod(lineToDisplay.dialogEvent.functionName);
+
+                    if (methodInfo != null)
+                    {
+                        // Invoke the function on the component
+                        methodInfo.Invoke(component, null);
+                    }
+                    else
+                    {
+                        Debug.LogError("Function not found: " + lineToDisplay.dialogEvent.functionName);
+                    }
                 }
                 else
                 {
-                    Debug.LogError("Function not found: " + lineToDisplay.dialogEvent.functionName);
+                    if(component is Behaviour)
+                    {
+                        (component as Behaviour).enabled = true;
+                    }
                 }
             }
             else
@@ -277,6 +293,23 @@ public class DialogueManager : MonoBehaviour
         if(lineToDisplay.name != null)
         {
             nameText.text = lineToDisplay.name;
+        }
+    }
+
+    private void AttachObjectsEvant()
+    {
+        // Get the GameObject with the specified tag
+        GameObject ParentObject = GameObject.FindWithTag(lineToDisplay.dialogEvent.ParentTag);
+        GameObject ChildObject = GameObject.FindWithTag(lineToDisplay.dialogEvent.ChildTag);
+
+        // Check if the GameObject was found
+        if (ParentObject != null && ChildObject != null)
+        {
+            ChildObject.transform.SetParent(ParentObject.transform);
+        }
+        else
+        {
+            Debug.LogWarning("No object found with tag: " + lineToDisplay.dialogEvent.ParentTag + " Or with tag: " + lineToDisplay.dialogEvent.ChildTag);
         }
     }
 }

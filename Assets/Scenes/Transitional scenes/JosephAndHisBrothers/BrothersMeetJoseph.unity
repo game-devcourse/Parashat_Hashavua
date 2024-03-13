@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 493282574}
   - component: {fileID: 493282577}
   - component: {fileID: 493282578}
+  - component: {fileID: 493282579}
   m_Layer: 0
   m_Name: Brothers
   m_TagString: Brothers
@@ -274,7 +275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &493282575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -336,8 +337,8 @@ Transform:
   m_GameObject: {fileID: 493282572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.2281, y: -4.621, z: 0}
-  m_LocalScale: {x: 0.5645132, y: 0.8458905, z: 1}
+  m_LocalPosition: {x: 17.5, y: -4.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 583202198}
@@ -350,21 +351,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493282572}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8702c673bb65969499294f524284af54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveAction:
     m_Name: Move
-    m_Type: 1
+    m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 6cec5bb7-d334-4b78-9246-ac26e20b0e47
+    m_Id: f6dce844-db2b-4d35-be07-c4342c476602
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 2DVector
-      m_Id: 3c7bb097-9deb-46e6-88bb-21be5c8f942e
+      m_Id: ca1e6dd8-5043-429b-805f-f945a76b447c
       m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
@@ -372,7 +373,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 4
     - m_Name: Up
-      m_Id: ecf6b0ea-13b8-4b42-92af-60bf76c973d6
+      m_Id: c7a63050-1673-443a-80fa-ab6cb14dee9d
       m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
@@ -380,7 +381,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Down
-      m_Id: a6fdd4be-1c9a-42d8-bd74-c3977216c51a
+      m_Id: 0911ca5f-833e-43a2-911b-bcf7658d87f6
       m_Path: <Keyboard>/downArrow
       m_Interactions: 
       m_Processors: 
@@ -388,7 +389,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Left
-      m_Id: 392f643d-b837-42ea-8ce1-8b4d52b17e93
+      m_Id: 1d6d433e-fb61-4bf4-97f9-15d6adc5b1c4
       m_Path: <Keyboard>/leftArrow
       m_Interactions: 
       m_Processors: 
@@ -396,7 +397,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     - m_Name: Right
-      m_Id: dbd7eb99-2bdf-49f2-ab81-4eb5f24c11b3
+      m_Id: 8cdbfcca-cc88-4a25-9c83-37af10a1df09
       m_Path: <Keyboard>/rightArrow
       m_Interactions: 
       m_Processors: 
@@ -449,6 +450,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.92, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &493282579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493282572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3122abcf0f24af64e999c9e6a6cbcd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speed: 6
 --- !u!1 &521508512
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 583202195}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.55, y: 6.17, z: -10}
+  m_LocalPosition: {x: -3.55, y: 4.61, z: -10}
   m_LocalScale: {x: 2.0100503, y: 1.634254, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -951,8 +966,8 @@ Transform:
   m_GameObject: {fileID: 759386893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.0091, y: -1.3095, z: 0}
-  m_LocalScale: {x: 0.5256087, y: 0.3986611, z: 1}
+  m_LocalPosition: {x: -14.08, y: -0.91, z: 0}
+  m_LocalScale: {x: 0.67959005, y: 0.5302416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1700,6 +1715,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: Dialogue
         componentName: StartTalking
+        functionName: 
         myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05DE\u05D4\u05D9\u05DB\u05DF \u05D1\u05D0\u05EA\u05DD?"
@@ -1708,6 +1724,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05D4\u05D0\u05D7\u05D9\u05DD"
       sentence: "\u05DE\u05D0\u05E8\u05E5 \u05DB\u05E0\u05E2\u05DF, \u05D1\u05D0\u05E0\u05D5
@@ -1717,6 +1734,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: 
       sentence: "\u05D7\u05E9\u05D1 \u05DC\u05E2\u05E6\u05DE\u05D5 \u05D9\u05D5\u05E1\u05E3:
@@ -1726,6 +1744,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05D0\u05EA\u05DD \u05DE\u05E8\u05D2\u05DC\u05D9\u05DD! \u05D1\u05D0\u05EA\u05DD
@@ -1736,6 +1755,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05D4\u05D0\u05D7\u05D9\u05DD"
       sentence: "\u05D0\u05E0\u05D7\u05E0\u05D5 \u05DC\u05D0 \u05DE\u05E8\u05D2\u05DC\u05D9\u05DD
@@ -1746,6 +1766,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05D4\u05D0\u05D7\u05D9\u05DD"
       sentence: "\u05D9\u05E9 \u05DC\u05E0\u05D5 \u05E2\u05D5\u05D3 2 \u05D0\u05D7\u05D9\u05DD
@@ -1756,6 +1777,7 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05D0\u05EA\u05DD \u05DB\u05D5\u05DC\u05DB\u05DD \u05E0\u05DB\u05E0\u05E1\u05D9\u05DD
@@ -1767,6 +1789,7 @@ MonoBehaviour:
         sceneName: desertAmusment
         objectComponent: 
         componentName: 
+        functionName: 
         myAnswers: []
 --- !u!114 &1726239294
 MonoBehaviour:

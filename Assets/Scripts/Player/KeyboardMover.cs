@@ -8,8 +8,10 @@ using UnityEngine.InputSystem;
 public class KeyboardMover : MonoBehaviour {
 
     [SerializeField] InputAction moveAction;
-
-    private float rotationWay;
+    // public Camera mainCamera;
+    protected Vector2 movement;
+    protected bool isFacingRight = false;
+    // protected Vector3 cameraScale;
 
     void OnValidate() {
         // Provide default bindings for the input actions.
@@ -32,27 +34,34 @@ public class KeyboardMover : MonoBehaviour {
         moveAction.Disable();
     }
 
-    protected (Vector3, float) NewPosition() {
+    protected Vector3 NewPosition() {
         if (moveAction.WasPerformedThisFrame()) {
             Vector3 movement = moveAction.ReadValue<Vector2>(); // Implicitly convert Vector2 to Vector3, setting z=0.
-            return (transform.position + movement, movement.x);
+            return transform.position + movement;
         } else {
-            return (transform.position, rotationWay);
+            return transform.position;
         }
     }
 
-
     void Update()  {
-        var positionOut = NewPosition();
-        transform.position = positionOut.Item1;
-        rotationWay = positionOut.Item2;
-        // if (rotationWay > 0)
-        // {
-        //     transform.localScale = new Vector3(1,1,1);
-        // }
-        // else if (rotationWay < 0)
-        // {
-        //     transform.localScale = new Vector3(-1,1,1);
-        // }
+        // cameraScale = mainCamera.transform.localScale;
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        transform.position = NewPosition();
+        if (movement.x < 0 && isFacingRight) //if the left arrow is pressed and the object is facing right then it will face left
+        {
+            flip();
+        }
+        else if(movement.x > 0 && !isFacingRight) //if the right arrow is pressed and the object is facing left then it will face right
+        {
+           flip();
+        }
+    }
+
+    protected void flip()
+    {
+        isFacingRight = !isFacingRight; //if facing right is true it will be false and if it is false it will be true
+        transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,1);
+        // mainCamera.transform.localScale = cameraScale;
     }
 }

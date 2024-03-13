@@ -17,6 +17,6 @@ public class ObjectCollector : MonoBehaviour
     }
 
     public void SetScoreField(NumberField newTextField) {
-        this.scoreField = newTextField;
+        scoreField = newTextField;
     }
 }

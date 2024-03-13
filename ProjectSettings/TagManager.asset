@@ -18,6 +18,8 @@ TagManager:
   - RottenFood
   - FreshFood
   - EgyptSoldier
+  - Goblet
+  - BenjaminSack
   layers:
   - Default
   - TransparentFX

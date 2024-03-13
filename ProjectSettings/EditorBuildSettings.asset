@@ -6,22 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Opening Scenes/Scene1.unity
+    path: Assets/Scenes/Non Parasha Scenes/Scene1.unity
     guid: 9e5211098077aba4e9006419e21ccc0f
   - enabled: 1
-    path: Assets/Scenes/Opening Scenes/OpenScreen.unity
-    guid: c88b5283b2bac9f4f9771349b2e5d777
-  - enabled: 1
-    path: Assets/Scenes/Opening Scenes/First Enter.unity
+    path: Assets/Scenes/Non Parasha Scenes/First Enter.unity
     guid: 22b6e14f3c99bb8418876e4b0cba2a02
   - enabled: 1
-    path: Assets/Scenes/Opening Scenes/Last Parasha.unity
+    path: Assets/Scenes/Non Parasha Scenes/OpenScreen.unity
+    guid: c88b5283b2bac9f4f9771349b2e5d777
+  - enabled: 1
+    path: Assets/Scenes/Non Parasha Scenes/Last Parasha.unity
     guid: c68593fee6f43d24cb24b5ed16a2c514
   - enabled: 1
-    path: Assets/Scenes/Amusments/Amusement.unity
+    path: Assets/Scenes/Amusments/Amusment.unity
     guid: 69d73809d2e90ef42a63070090e1b69a
   - enabled: 1
-    path: Assets/Scenes/Opening Scenes/Current Parasha.unity
+    path: Assets/Scenes/Non Parasha Scenes/Current Parasha.unity
     guid: eac63a42ec2f92e43bc0b5fbf37f476e
   - enabled: 1
     path: Assets/Scenes/Transitional scenes/AtThePalace/EnteringGail.unity
@@ -89,4 +89,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Transitional scenes/JosephAndHisBrothers/BlamingBenjamin.unity
     guid: f383311b063419d4598eb87c5f9413e9
+  - enabled: 1
+    path: Assets/Scenes/Non Parasha Scenes/FinishParasha.unity
+    guid: 4cd0ba548f4bf1f4fbb3355972ce530d
   m_configObjects: {}

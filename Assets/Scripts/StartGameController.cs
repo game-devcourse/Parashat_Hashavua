@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class StartGameController : MonoBehaviour
 {
-    [SerializeField] KeyboardMover ob;
+    [SerializeField] KeyboardMover ob = null;
+    [SerializeField] KeyBoardMoverSmoth obS = null;
 
     void Start()
     {
-        ob.enabled = false;
+        if(ob != null) ob.enabled = false;
+        if(obS != null) obS.enabled = false;
     }
 
     //Start is called before the first frame update
     public void CanStart()
     {
-        ob.enabled = true;
+        if(ob != null) ob.enabled = true;
+        if(obS != null) obS.enabled = true;
     }
 }

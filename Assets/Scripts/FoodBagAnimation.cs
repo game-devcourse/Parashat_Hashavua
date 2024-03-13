@@ -4,64 +4,53 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
-public class FoodBagAnimation : TargetMover//MonoBehaviour
+public class FoodBagAnimation : MonoBehaviour
 {
     public GameObject Goblet;
     public GameObject[] foodBags;
     public Transform checkPoint;
     public TextMeshProUGUI textDisplay;
+    public TextMeshProUGUI nameDisplay;
     public string sentence;
+    public string name;
     public Image scrol;
-    public float speed;
+    public string sceneName;
 
+    private Vector3[] positionBags;
 
-    private Vector3 positionBag1, positionBag2, positionBag3;
-     protected override void Start()
+    void Start()
     {
-        positionBag1 = foodBags[1].transform.position;
-        positionBag2 = foodBags[2].transform.position;
-        positionBag3 = foodBags[3].transform.position;
-        tilemapGraph = new TilemapGraph(tilemap, allowedTiles.Get());
-        timeBetweenSteps = 1 / speed;
+        Goblet.SetActive(false);
+        positionBags = new Vector3[foodBags.Length];
+        positionBags[0] = foodBags[0].transform.position;
+        positionBags[1] = foodBags[1].transform.position;
+        positionBags[2] = foodBags[2].transform.position;
     }
 
     public void moveBags()
     {
         Debug.Log("the bags are start moving");
-        SetTarget(checkPoint.position);
-        StartCoroutine(MoveTowardsTheTarget(0));
-        SetTarget(positionBag1);
-        StartCoroutine(MoveTowardsTheTarget(0));
-        SetTarget(checkPoint.position);
-        StartCoroutine(MoveTowardsTheTarget(1));
-        SetTarget(positionBag2);
-        StartCoroutine(MoveTowardsTheTarget(1));
-        SetTarget(checkPoint.position);
-        StartCoroutine(MoveTowardsTheTarget(2));
+        StartCoroutine(GoCheck());
+    }
 
+    IEnumerator GoCheck()
+    {
+        for (int index = 0; index < 2; index++)
+        {
+            foodBags[index].transform.position = checkPoint.position;
+            yield return new WaitForSeconds(1.5f);
+            foodBags[index].transform.position = positionBags[index];
+            yield return new WaitForSeconds(1f);
+        }
+        foodBags[2].transform.position = checkPoint.position;
+        yield return new WaitForSeconds(1.5f);
         Goblet.SetActive(true);
         scrol.enabled = true; 
         textDisplay.text = sentence;
-    }
-
-    IEnumerator MoveTowardsTheTarget(int index) {
-        for(;;) {
-            yield return new WaitForSeconds(timeBetweenSteps);
-            if (enabled && !atTarget)
-                MakeOneStepTowardsTheTarget(index);
-        }
-    }
-
-    protected void MakeOneStepTowardsTheTarget(int index) {
-        Vector3Int startNode = tilemap.WorldToCell(foodBags[index].transform.position);
-        Vector3Int endNode = targetInGrid;
-        List<Vector3Int> shortestPath = BFS.GetPath(tilemapGraph, startNode, endNode, maxIterations);
-        if (shortestPath.Count >= 2) { // shortestPath contains both source and target.
-            Vector3Int nextNode = shortestPath[1];
-            foodBags[index].transform.position = tilemap.GetCellCenterWorld(nextNode);
-        } else {
-            atTarget = true;
-        }
+        nameDisplay.text = name;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(sceneName);
     }
 }

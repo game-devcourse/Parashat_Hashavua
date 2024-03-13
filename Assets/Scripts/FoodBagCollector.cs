@@ -40,19 +40,8 @@ public class FoodBagCollector : ObjectCollector
             scrol.enabled = true;
             nameText.text = name;
             dialogueText.text = sentenceToDisplay;
-            // TypeSentence(sentenceToDisplay);
         }
     }
-
-    // IEnumerator TypeSentence(string sentence)
-    // {
-    //     //we use the IEnumerator so we can use the WaitForSeconds so we can display the letters one by one
-    //     foreach(char letter in sentence.ToCharArray())
-    //     {
-    //         dialogueText.text += letter;
-    //         yield return new WaitForSeconds(0.1f);
-    //     }
-    // }
 
     void Update()
     {
@@ -64,5 +53,4 @@ public class FoodBagCollector : ObjectCollector
             scrol.enabled = false;
         }
     }
-
 }

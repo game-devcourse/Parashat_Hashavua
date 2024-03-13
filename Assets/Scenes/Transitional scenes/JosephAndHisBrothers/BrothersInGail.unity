@@ -8560,10 +8560,13 @@ MonoBehaviour:
     - name: 
       sentence: "\u05DB\u05E2\u05D1\u05D5\u05E8 3 \u05D9\u05DE\u05D9\u05DD."
       dialogEvent:
-        eventType: End Conversation
+        eventType: 
         sceneName: 
-        objectComponent: Dialogue
-        componentName: StartTalking
+        objectComponent: 
+        componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05DB\u05D5\u05DC\u05DB\u05DD \u05DE\u05E9\u05D5\u05D7\u05E8\u05E8\u05D9\u05DD!
@@ -8574,6 +8577,9 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05D5\u05E7\u05D7\u05D5 \u05DC\u05DB\u05DD \u05D0\u05D5\u05DB\u05DC
@@ -8584,6 +8590,9 @@ MonoBehaviour:
         sceneName: BrothersOutOfGail
         objectComponent: 
         componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
 --- !u!114 &1075555522
 MonoBehaviour:

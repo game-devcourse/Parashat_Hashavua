@@ -612,7 +612,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: cea82f1b3c891c1408a0debbaf9b4560, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -710,6 +710,9 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05D9\u05E2\u05E7\u05D1"
       sentence: "\u05D1\u05E0\u05D9\u05DE\u05D9\u05DF \u05E0\u05E9\u05D0\u05E8 \u05D0\u05D9\u05EA\u05D9."
@@ -718,6 +721,9 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05D4\u05D3\u05E8\u05DB\u05D4"
       sentence: "\u05DB\u05E2\u05EA \u05D4\u05EA\u05E7\u05D3\u05DD \u05E7\u05D3\u05D9\u05DE\u05D4
@@ -728,6 +734,9 @@ MonoBehaviour:
         sceneName: 
         objectComponent: 
         componentName: 
+        functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
 --- !u!4 &441341574
 Transform:
@@ -1278,7 +1287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 988d26d14a706fb40b2b34d6f68dcd1b, type: 2}
   m_sharedMaterial: {fileID: -7872481631276212497, guid: 988d26d14a706fb40b2b34d6f68dcd1b, type: 2}

@@ -18,6 +18,7 @@ public class DialogueLine
     *<"Disable Component", component>
     *<"Enable Component",  component, functionName>
     *<"Option Answers", an array of buttons>
+    *<"Attach Objects", parent object, child object>
     *We decide to make the type as an object so we can get verious types such as components, string, game object etc.
     **/
     public DialogueEvent dialogEvent;
@@ -31,6 +32,8 @@ public class DialogueEvent
     public string objectComponent;
     public string componentName;
     public string functionName;
+    public string ParentTag;
+    public string ChildTag;
     public OptionAnswer[] myAnswers;
 }
 
