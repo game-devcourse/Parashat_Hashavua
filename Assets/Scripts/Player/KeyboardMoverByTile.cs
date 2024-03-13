@@ -9,6 +9,7 @@ using UnityEngine.Tilemaps;
 public class KeyboardMoverByTile: KeyboardMover {
     [SerializeField] Tilemap tilemap = null;
     [SerializeField] AllowedTiles allowedTiles = null;
+    // public float moveSpeed = 4f;
 
 
     private TileBase TileOnPosition(Vector3 worldPosition) {
@@ -26,7 +27,8 @@ public class KeyboardMoverByTile: KeyboardMover {
         movement.y = Input.GetAxisRaw("Vertical");
         Vector3 newPosition = NewPosition();
         TileBase tileOnNewPosition = TileOnPosition(newPosition);
-        if (allowedTiles.Contains(tileOnNewPosition)) {
+        if (allowedTiles.Contains(tileOnNewPosition) && moveAction.WasPerformedThisFrame()) {
+            //transform.Translate(newPosition * moveSpeed * Time.deltaTime, Space.World);
             transform.position = newPosition;
         } else {
             Debug.Log("You cannot walk on " + tileOnNewPosition + "!");

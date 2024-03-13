@@ -2627,7 +2627,7 @@ GameObject:
   - component: {fileID: 1094395433}
   - component: {fileID: 1094395437}
   - component: {fileID: 1094395436}
-  - component: {fileID: 1094395435}
+  - component: {fileID: 1094395438}
   m_Layer: 0
   m_Name: Joseph
   m_TagString: Joseph
@@ -2675,7 +2675,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4b625a2b36b993e4894f1df2e4671bdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2702,69 +2702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1094395435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094395432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ace867dbe7808c42bc02df517d62f71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveAction:
-    m_Name: Move
-    m_Type: 1
-    m_ExpectedControlType: 
-    m_Id: 31d12894-bc65-44cb-86d8-96ca29c9ae2d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2DVector
-      m_Id: 406083ce-f265-4843-8527-fdf8f77d15dd
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 4
-    - m_Name: Up
-      m_Id: 7c3c8256-26e2-4b65-9962-13de2bd43f8e
-      m_Path: <Keyboard>/upArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: Down
-      m_Id: d81b8a45-941e-4e9f-97df-b49866ab04f3
-      m_Path: <Keyboard>/downArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: Left
-      m_Id: 0558bfa3-253f-4fed-9d26-568ce0f5469b
-      m_Path: <Keyboard>/leftArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    - m_Name: Right
-      m_Id: 95588ed3-bed1-4869-8ef6-6903e86bb54c
-      m_Path: <Keyboard>/rightArrow
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move
-      m_Flags: 8
-    m_Flags: 0
-  tilemap: {fileID: 47518219}
-  allowedTiles: {fileID: 1432538345}
 --- !u!70 &1094395436
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2827,6 +2764,69 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1094395438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094395432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ace867dbe7808c42bc02df517d62f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAction:
+    m_Name: Move
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 94f732b0-5970-4e47-8092-f7b065f31977
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2DVector
+      m_Id: 5be404c1-05f7-4f42-9695-8578f22b83db
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: df7d75b8-3688-4960-ad68-869af905e297
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: 98985a95-fe45-46dd-a437-55bc08bdcaff
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: 698d5c0b-1a56-4016-acb2-882975265477
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 274c7f0a-2598-4316-b653-5778ff35c410
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  tilemap: {fileID: 47518219}
+  allowedTiles: {fileID: 1432538345}
 --- !u!1 &1432538344
 GameObject:
   m_ObjectHideFlags: 0

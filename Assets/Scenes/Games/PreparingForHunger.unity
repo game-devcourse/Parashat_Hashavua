@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5018867, g: 0.23604336, b: 0.05587037, a: 0.6313726}
+  m_Color: {r: 0.05490196, g: 0.09019608, b: 0.5019608, a: 0.6313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 420933951}
         m_TargetAssemblyTypeName: MouseClick, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -3635,7 +3635,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: desertAmusment
+          m_StringArgument: PreparingForHunger
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &628131418
@@ -4139,7 +4139,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 420933951}
         m_TargetAssemblyTypeName: MouseClick, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -4148,7 +4148,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BrothersInGail
+          m_StringArgument: BrothersAndJacob
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &734389896

@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
  */
 public class KeyboardMover : MonoBehaviour {
 
-    [SerializeField] InputAction moveAction;
+    [SerializeField] protected InputAction moveAction;
     // public Camera mainCamera;
     protected Vector2 movement;
     protected bool isFacingRight = false;

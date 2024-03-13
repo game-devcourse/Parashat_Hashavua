@@ -552,6 +552,7 @@ MonoBehaviour:
     m_Flags: 0
   tilemap: {fileID: 992717314}
   allowedTiles: {fileID: 88831787}
+  moveSpeed: 4
 --- !u!212 &14816593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1459,19 +1460,20 @@ MonoBehaviour:
         myAnswers:
         - btn: {fileID: 1655511964}
           isTheRightAnswer: 0
-          txt: "\u05EA\u05D1\u05D5\u05D0 \u05D0\u05D9\u05EA\u05E0\u05D5 \u05D5\u05EA\u05E8\u05D0\u05D4
+          txt: "\u05D0. \u05EA\u05D1\u05D5\u05D0 \u05D0\u05D9\u05EA\u05E0\u05D5 \u05D5\u05EA\u05E8\u05D0\u05D4
             \u05E9\u05D4\u05D5\u05D0 \u05D7\u05D5\u05D6\u05E8."
           wrongAnswerResponse: "\u05D9\u05E2\u05E7\u05D1 \u05E2\u05D3\u05D9\u05D9\u05DF
             \u05DC\u05D0 \u05DE\u05E9\u05D5\u05DB\u05E0\u05E2."
         - btn: {fileID: 1537261129}
           isTheRightAnswer: 1
-          txt: "\u05D0\u05DD \u05DC\u05D0 \u05D0\u05D7\u05D6\u05D9\u05E8 \u05EA\u05D4\u05E8\u05D5\u05D2
-            \u05D0\u05EA \u05D1\u05E0\u05D9\u05D9! \u05D0\u05E0\u05D9 \u05DE\u05D1\u05D8\u05D9\u05D7
-            \u05DC\u05DA \u05E9\u05D0\u05E9\u05D9\u05D1 \u05D0\u05D5\u05EA\u05D5!"
+          txt: "\u05D1. \u05D0\u05DD \u05DC\u05D0 \u05D0\u05D7\u05D6\u05D9\u05E8
+            \u05EA\u05D4\u05E8\u05D5\u05D2 \u05D0\u05EA \u05D1\u05E0\u05D9\u05D9!
+            \u05D0\u05E0\u05D9 \u05DE\u05D1\u05D8\u05D9\u05D7 \u05DC\u05DA \u05E9\u05D0\u05E9\u05D9\u05D1
+            \u05D0\u05D5\u05EA\u05D5!"
           wrongAnswerResponse: 
         - btn: {fileID: 1909933828}
           isTheRightAnswer: 0
-          txt: "\u05E9\u05DE\u05E2\u05D5\u05DF \u05D7\u05D5\u05D6\u05E8 \u05D5\u05D2\u05DD
+          txt: "\u05D2. \u05E9\u05DE\u05E2\u05D5\u05DF \u05D7\u05D5\u05D6\u05E8 \u05D5\u05D2\u05DD
             \u05D1\u05E0\u05D9\u05DE\u05D9\u05DF \u05D9\u05D7\u05D6\u05D5\u05E8."
           wrongAnswerResponse: "\u05D9\u05E2\u05E7\u05D1 \u05E2\u05D3\u05D9\u05D9\u05DF
             \u05DC\u05D0 \u05DE\u05E9\u05D5\u05DB\u05E0\u05E2."
@@ -1518,17 +1520,17 @@ MonoBehaviour:
         myAnswers:
         - btn: {fileID: 1655511964}
           isTheRightAnswer: 0
-          txt: "\u05D0\u05D9\u05DF \u05D1\u05E8\u05D9\u05E8\u05D4 \u05D0\u05D7\u05E8\u05EA."
+          txt: "\u05D0. \u05D0\u05D9\u05DF \u05D1\u05E8\u05D9\u05E8\u05D4 \u05D0\u05D7\u05E8\u05EA."
           wrongAnswerResponse: "\u05D9\u05E2\u05E7\u05D1 \u05DC\u05D0 \u05D4\u05E9\u05EA\u05DB\u05E0\u05E2"
         - btn: {fileID: 1537261129}
           isTheRightAnswer: 0
-          txt: "\u05D0\u05E0\u05D9 \u05DE\u05D1\u05D8\u05D9\u05D7 \u05E9\u05D0\u05D7\u05D6\u05D9\u05E8
+          txt: "\u05D1. \u05D0\u05E0\u05D9 \u05DE\u05D1\u05D8\u05D9\u05D7 \u05E9\u05D0\u05D7\u05D6\u05D9\u05E8
             \u05D0\u05D5\u05EA\u05D5."
           wrongAnswerResponse: "\u05D9\u05E2\u05E7\u05D1 \u05DC\u05D0 \u05D4\u05E9\u05EA\u05DB\u05E0\u05E2"
         - btn: {fileID: 1909933828}
           isTheRightAnswer: 1
-          txt: "\u05D4\u05E8\u05E2\u05D1 \u05DE\u05D7\u05E8\u05D9\u05E3, \u05D7\u05D9\u05D9\u05D1
-            \u05DC\u05D4\u05D1\u05D9\u05D0 \u05D0\u05D5\u05DB\u05DC."
+          txt: "\u05D2. \u05D4\u05E8\u05E2\u05D1 \u05DE\u05D7\u05E8\u05D9\u05E3,
+            \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D1\u05D9\u05D0 \u05D0\u05D5\u05DB\u05DC."
           wrongAnswerResponse: 
     - name: "\u05D9\u05D4\u05D5\u05D3\u05D4"
       sentence: "\u05D0\u05D1\u05D0 \u05D4\u05E8\u05E2\u05D1 \u05DE\u05D7\u05E8\u05D9\u05E3
@@ -5256,9 +5258,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.4117647, g: 0.40784314, b: 0.40784314, a: 1}
-    m_HighlightedColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
-    m_PressedColor: {r: 0.4117647, g: 0.40784314, b: 0.40784314, a: 1}
-    m_SelectedColor: {r: 0.4117647, g: 0.40784314, b: 0.40784314, a: 1}
+    m_HighlightedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_PressedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_SelectedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5595,9 +5597,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4113207, g: 0.40899247, b: 0.40899247, a: 1}
-    m_PressedColor: {r: 0.4117647, g: 0.40784314, b: 0.40784314, a: 1}
-    m_SelectedColor: {r: 0.4117647, g: 0.40784314, b: 0.40784314, a: 1}
+    m_HighlightedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_PressedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_SelectedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6089,9 +6091,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_PressedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
+    m_SelectedColor: {r: 0.29411766, g: 0.2901961, b: 0.2901961, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
