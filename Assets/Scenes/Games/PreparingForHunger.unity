@@ -2922,7 +2922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGameText: {fileID: 480051437}
   timer: {fileID: 261159688}
-  controllerGame: {fileID: 0}
+  controllerGame: {fileID: 146123795}
 --- !u!4 &420933952
 Transform:
   m_ObjectHideFlags: 0

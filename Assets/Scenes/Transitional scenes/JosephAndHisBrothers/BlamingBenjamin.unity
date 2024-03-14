@@ -433,6 +433,8 @@ MonoBehaviour:
         objectComponent: 
         componentName: 
         functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05E9\u05D5\u05DE\u05E8\u05D9\u05DD"
       sentence: "\u05DE\u05D3\u05D5\u05E2 \u05D2\u05E0\u05D1\u05EA\u05DD \u05D0\u05EA
@@ -443,6 +445,8 @@ MonoBehaviour:
         objectComponent: 
         componentName: 
         functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05D4\u05D0\u05D7\u05D9\u05DD"
       sentence: "\u05DC\u05D0 \u05D2\u05E0\u05D1\u05E0\u05D5 \u05DB\u05DC\u05D5\u05DD!"
@@ -452,6 +456,8 @@ MonoBehaviour:
         objectComponent: 
         componentName: 
         functionName: 
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
     - name: "\u05E9\u05D5\u05DE\u05E8\u05D9\u05DD"
       sentence: "\u05D4\u05E8\u05D0\u05D5 \u05DC\u05E0\u05D5 \u05D0\u05EA \u05E9\u05E7\u05D9\u05DB\u05DD."
@@ -461,6 +467,8 @@ MonoBehaviour:
         objectComponent: SceneController
         componentName: FoodBagAnimation
         functionName: moveBags
+        ParentTag: 
+        ChildTag: 
         myAnswers: []
 --- !u!4 &248015385
 Transform:
@@ -28815,7 +28823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7283019, g: 0.6802065, b: 0.6802065, a: 1}
+  m_Color: {r: 0.5254902, g: 0.4862745, b: 0.4862745, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

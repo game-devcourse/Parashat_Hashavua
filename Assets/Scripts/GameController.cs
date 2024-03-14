@@ -17,10 +17,6 @@ public class GameController : MonoBehaviour
     //Start is called before the first frame update
     public void CanStart()
     {
-        if(timer == null)
-        {
-            Debug.Log("no timer");
-        }
         if(ob != null) ob.enabled = true;
         if(obS != null) obS.enabled = true;
     }
