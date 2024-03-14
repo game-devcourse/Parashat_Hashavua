@@ -30,9 +30,10 @@ public class KeyboardMoverByTile: KeyboardMover {
         if (allowedTiles.Contains(tileOnNewPosition) && moveAction.WasPerformedThisFrame()) {
             //transform.Translate(newPosition * moveSpeed * Time.deltaTime, Space.World);
             transform.position = newPosition;
-        } else {
-            Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
-        }
+        } 
+        // else {
+        //     Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
+        // }
         if (movement.x < 0 && isFacingRight) //if the left arrow is pressed and the object is facing right then it will face left
         {
             flip();

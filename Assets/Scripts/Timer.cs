@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject gameoverText;
 
     private bool canStart = false;
-    public bool isOutOfTime = false;
+    private bool OutOfTime = false;
 
     void Start()
     {
@@ -27,6 +27,11 @@ public class Timer : MonoBehaviour
         canStart = false;
     }
 
+    public bool isOutOfTime()
+    {
+        return OutOfTime;
+    }
+
     void Update()
     {
         if(canStart)
@@ -40,7 +45,7 @@ public class Timer : MonoBehaviour
                 if(remainingTime < 0)
                 {
                     remainingTime = 0;
-                    isOutOfTime = true;
+                    OutOfTime = true;
                     timerText.color = Color.red;
                     gameoverText.SetActive(true);
                 }

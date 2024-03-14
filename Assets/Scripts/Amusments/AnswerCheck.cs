@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class AnswerCheck : MonoBehaviour
@@ -22,6 +23,9 @@ public class AnswerCheck : MonoBehaviour
         if(ans){
             Debug.Log("Correct");
             goodjob.gameObject.SetActive(true);
+
+            // Disable input on the input field
+            GetComponent<TMP_InputField>().interactable = false;
             
             // Check if coinManager is null before accessing its components
             if (coinManager != null) {

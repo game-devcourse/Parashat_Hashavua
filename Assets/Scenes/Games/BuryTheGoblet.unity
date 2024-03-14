@@ -3880,7 +3880,6 @@ MonoBehaviour:
   timerText: {fileID: 1327805042}
   remainingTime: 20
   gameoverText: {fileID: 384286537}
-  isOutOfTime: 0
 --- !u!224 &907491936
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7021,7 +7020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGameText: {fileID: 926868935}
   timer: {fileID: 907491935}
-  controllerGame: {fileID: 2105905497}
+  controllerGame: {fileID: 2105905499}
 --- !u!4 &1849990553
 Transform:
   m_ObjectHideFlags: 0
@@ -7870,7 +7869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105905498}
-  - component: {fileID: 2105905497}
+  - component: {fileID: 2105905499}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -7878,20 +7877,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2105905497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105905496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2da1d1692d6854288de06da60c0a7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ob: {fileID: 0}
-  obS: {fileID: 1717268551}
 --- !u!4 &2105905498
 Transform:
   m_ObjectHideFlags: 0
@@ -7907,6 +7892,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2105905499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105905496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4b174259365cd4daf56929475267b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ob: {fileID: 0}
+  obS: {fileID: 1717268551}
+  timer: {fileID: 907491935}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

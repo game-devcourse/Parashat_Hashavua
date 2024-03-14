@@ -8,7 +8,7 @@ public class MouseClick : MonoBehaviour
 {
     [SerializeField] GameObject startGameText;
     [SerializeField] Timer timer;
-    [SerializeField] StartGameController controllerGame = null;
+    [SerializeField] GameController controllerGame = null;
    
     /**
         This script is responsible to load a scene that will be giving in the unity, 

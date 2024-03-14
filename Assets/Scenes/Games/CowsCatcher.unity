@@ -903,7 +903,6 @@ MonoBehaviour:
   timerText: {fileID: 582108549}
   remainingTime: 15
   gameoverText: {fileID: 1458646422}
-  isOutOfTime: 0
 --- !u!114 &509096545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3778,7 +3777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1788524336}
-  - component: {fileID: 1788524335}
+  - component: {fileID: 1788524337}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -3786,20 +3785,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1788524335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788524334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2da1d1692d6854288de06da60c0a7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ob: {fileID: 0}
-  obS: {fileID: 0}
 --- !u!4 &1788524336
 Transform:
   m_ObjectHideFlags: 0
@@ -3815,6 +3800,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1788524337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788524334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4b174259365cd4daf56929475267b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ob: {fileID: 0}
+  obS: {fileID: 0}
+  timer: {fileID: 509096544}
 --- !u!1 &1799760177
 GameObject:
   m_ObjectHideFlags: 0
@@ -9514,7 +9514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGameText: {fileID: 0}
   timer: {fileID: 509096544}
-  controllerGame: {fileID: 1788524335}
+  controllerGame: {fileID: 1788524337}
 --- !u!4 &1893969415
 Transform:
   m_ObjectHideFlags: 0

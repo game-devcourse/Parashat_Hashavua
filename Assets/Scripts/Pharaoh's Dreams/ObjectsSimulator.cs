@@ -58,7 +58,7 @@ public class ObjectsSimulate : MonoBehaviour
 
     void Update()
     {
-        if(timer.isOutOfTime)
+        if(timer.isOutOfTime())
         {
             for(int i=0; i<Objects.Length; i++)
             {

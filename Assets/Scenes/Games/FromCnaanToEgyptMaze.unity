@@ -17211,7 +17211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGameText: {fileID: 1551669059}
   timer: {fileID: 1397565321}
-  controllerGame: {fileID: 756986693}
+  controllerGame: {fileID: 756986695}
 --- !u!4 &205497772
 Transform:
   m_ObjectHideFlags: 0
@@ -19351,7 +19351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756986694}
-  - component: {fileID: 756986693}
+  - component: {fileID: 756986695}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -19359,20 +19359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &756986693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756986692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c2da1d1692d6854288de06da60c0a7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ob: {fileID: 1691470655}
-  obS: {fileID: 0}
 --- !u!4 &756986694
 Transform:
   m_ObjectHideFlags: 0
@@ -19388,6 +19374,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756986695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756986692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4b174259365cd4daf56929475267b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ob: {fileID: 1691470655}
+  obS: {fileID: 0}
+  timer: {fileID: 1397565321}
 --- !u!1 &982304172
 GameObject:
   m_ObjectHideFlags: 0
@@ -19748,7 +19749,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromCnaanToEjyptMaze
+          m_StringArgument: FromCnaanToEgyptMaze
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1077176019
@@ -20168,7 +20169,6 @@ MonoBehaviour:
   timerText: {fileID: 1025134769}
   remainingTime: 30
   gameoverText: {fileID: 5098545}
-  isOutOfTime: 0
 --- !u!114 &1397565322
 MonoBehaviour:
   m_ObjectHideFlags: 0
