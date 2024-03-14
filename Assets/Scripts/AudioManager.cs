@@ -50,4 +50,24 @@ public class AudioManager : MonoBehaviour
             source.Play();
         }
     }
+
+    public void StopMusicOnAllSources()
+    {
+        foreach (var source in audioSources)
+        {
+            source.Stop();
+        }
+    }
+
+    public bool IsMusicPlaying()
+    {
+        foreach (var source in audioSources)
+        {
+            if (source.isPlaying)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

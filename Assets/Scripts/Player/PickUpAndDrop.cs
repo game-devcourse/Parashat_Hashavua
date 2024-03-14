@@ -83,7 +83,7 @@ public class PickUpAndDrop : MonoBehaviour
         {
             itemToDrop.transform.SetParent(dropObject.transform);
             timer.stopTime();
-            GetComponent<KeyBoardMoverSmoth>().enabled = false;
+            GetComponent<KeyboardMover>().enabled = false;
             itemToDrop.GetComponent<SpriteRenderer>().sortingOrder = orderInlayerAfterDrop;
             dropText.gameObject.SetActive(false);
             pickUpText.gameObject.SetActive(false);

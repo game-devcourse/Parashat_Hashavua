@@ -51,6 +51,7 @@ public class FoodBagAnimation : MonoBehaviour
         textDisplay.text = sentence;
         nameDisplay.text = name;
         yield return new WaitForSeconds(2f);
+
         SceneManager.LoadScene(sceneName);
     }
 }

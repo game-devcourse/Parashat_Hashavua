@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1199670428524024521}
   - component: {fileID: -9179078967409392850}
   - component: {fileID: 9006376371699455160}
+  - component: {fileID: -2706515669868635818}
   m_Layer: 0
   m_Name: ThinCow
   m_TagString: ThinCow
@@ -185,3 +186,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catchTag: FatCow
+--- !u!114 &-2706515669868635818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005972379744935396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ace867dbe7808c42bc02df517d62f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAction:
+    m_Name: Move
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: d603a386-d8d9-4aa8-b59b-71b401afc5f7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2DVector
+      m_Id: 45dbf3dd-bab6-459d-9da3-383b1d28f296
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: 8c9de2d5-941b-48cc-976a-af91d343d925
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: fd982935-80b6-4b85-bda0-cfec8bd17828
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: 9002abfc-91e7-487f-9f93-b2b5af712e9f
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 4925df6a-2131-4cfd-81e9-fc49f99902a9
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  moveSpeed: 6
+  tilemap: {fileID: 0}
+  allowedTiles: {fileID: 0}

@@ -9,6 +9,7 @@ public class MouseClick : MonoBehaviour
     [SerializeField] GameObject startGameText;
     [SerializeField] Timer timer;
     [SerializeField] GameController controllerGame = null;
+    private static AudioManager music;
    
     /**
         This script is responsible to load a scene that will be giving in the unity, 
@@ -24,5 +25,17 @@ public class MouseClick : MonoBehaviour
         startGameText.SetActive(false);
         controllerGame.CanStart();
         timer.startState();
+    }
+
+    public void ManageMusic()
+    {
+        if(music.IsMusicPlaying())
+        {
+            music.StopMusicOnAllSources();
+        }
+        else
+        {
+            music.PlayMusicOnAllSources();
+        }
     }
 }

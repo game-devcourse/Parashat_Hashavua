@@ -59,7 +59,8 @@ public class TutorialNPC : TargetMover
     IEnumerator ShowPlayerExplanation(int pointIndex)
     {
         isExplaining = true;
-        dialogueText.text = ""; // Clear previous text
+        if(dialogueText != null)
+            dialogueText.text = ""; // Clear previous text
         foreach(string sentence in dialoguePoints[pointIndex].sentences)
         {
             foreach (char letter in sentence.ToCharArray())

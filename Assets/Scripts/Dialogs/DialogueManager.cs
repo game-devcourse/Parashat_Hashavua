@@ -307,6 +307,14 @@ public class DialogueManager : MonoBehaviour
         // Check if the GameObject was found
         if (ParentObject != null && ChildObject != null)
         {
+            if(ParentObject.transform.localScale.x < 0 && ChildObject.transform.localScale.x > 0)
+            {
+                ChildObject.transform.localScale = new Vector3(-ChildObject.transform.localScale.x,ChildObject.transform.localScale.y,1f);
+            }
+            if(ParentObject.transform.localScale.x > 0 && ChildObject.transform.localScale.x < 0)
+            {
+                ChildObject.transform.localScale = new Vector3(ChildObject.transform.localScale.x,ChildObject.transform.localScale.y,1f);
+            }
             ChildObject.transform.SetParent(ParentObject.transform);
         }
         else
