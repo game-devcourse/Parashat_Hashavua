@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
     private static AudioManager _instance;
     private List<AudioSource> audioSources = new List<AudioSource>();
 
+    private bool isMuted; // Track the mute state
+
     public static AudioManager Instance
     {
         get
@@ -30,11 +32,13 @@ public class AudioManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject); // Preserve AudioManager across scene changes
         }
         else
         {
+            // Destroy duplicate AudioManager instances
             Destroy(gameObject);
+            //return;
         }
 
         // Get all AudioSources in the scene and add them to the list
@@ -42,32 +46,37 @@ public class AudioManager : MonoBehaviour
         audioSources.AddRange(sourcesInScene);
     }
 
-    // Add a method to play the music on all AudioSources
-    public void PlayMusicOnAllSources()
+    // A method to mute or unmute the music
+    public void ManageMusic()
     {
-        foreach (var source in audioSources)
+        //we are checking each time the button is pressed what is the state of the misuc and acording to that change the isMuted
+        //we don't initialize it at the beggining since every time the audioManager will initialize it will start all over(aka in a new scene)
+        if(audioSources[0].volume == 0)
         {
-            source.Play();
+            isMuted = true;
         }
-    }
-
-    public void StopMusicOnAllSources()
-    {
-        foreach (var source in audioSources)
+        if(audioSources[0].volume == 1)
         {
-            source.Stop();
+            isMuted = false;
         }
-    }
 
-    public bool IsMusicPlaying()
-    {
+        isMuted = !isMuted;
+        Debug.Log("start managing music the condition of the music after pressing button is now muted?    " + isMuted);
+        // Set the volume based on the mute state
+        float volume = isMuted ? 0f : 1f;
+        Debug.Log("the number of audioSources:  " + audioSources.Count);
         foreach (var source in audioSources)
         {
-            if (source.isPlaying)
+            // Check if the AudioSource component is not destroyed
+            if (source != null)
             {
-                return true;
+                source.volume = volume; // Set the volume
             }
         }
-        return false;
+    }
+    // Add a method to check if the music is muted
+    public bool IsMuted()
+    {
+        return isMuted;
     }
 }

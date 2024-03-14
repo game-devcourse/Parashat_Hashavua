@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4b174259365cd4daf56929475267b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ob: {fileID: 0}
+  ob: {fileID: 904825813}
   timer: {fileID: 261159688}
 --- !u!1 &174796145
 GameObject:
@@ -2923,7 +2923,6 @@ MonoBehaviour:
   startGameText: {fileID: 480051437}
   timer: {fileID: 261159688}
   controllerGame: {fileID: 146123795}
-  music: {fileID: 623368260}
 --- !u!4 &420933952
 Transform:
   m_ObjectHideFlags: 0
@@ -4345,7 +4344,7 @@ GameObject:
   - component: {fileID: 904825809}
   - component: {fileID: 904825810}
   - component: {fileID: 904825812}
-  - component: {fileID: 904825811}
+  - component: {fileID: 904825813}
   m_Layer: 0
   m_Name: joseph
   m_TagString: Player
@@ -4514,18 +4513,6 @@ MonoBehaviour:
   winText: {fileID: 12469772}
   gameoverFalseCollectText: {fileID: 557545570}
   coinsWin: 20
---- !u!114 &904825811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904825803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3122abcf0f24af64e999c9e6a6cbcd5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &904825812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4571,6 +4558,68 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.61, y: 1.862359}
   m_EdgeRadius: 0
+--- !u!114 &904825813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904825803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8702c673bb65969499294f524284af54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveAction:
+    m_Name: Move
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 88678447-c3df-4a8e-9196-5d9baebe352b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2DVector
+      m_Id: 3e321bf1-6863-490d-bb3d-81a397e7f4f2
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: Up
+      m_Id: efc92190-fdf5-4259-9357-289a58f191b8
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Down
+      m_Id: 5bdb206c-dd57-4edd-8346-23faedfcb85f
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Left
+      m_Id: 7afbfd2b-0701-4dc3-880d-0ec55ccffd41
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: Right
+      m_Id: 25a43b51-a45c-4d33-b1c5-ed907e250fd1
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  moveSpeed: 5
 --- !u!1 &914568949
 GameObject:
   m_ObjectHideFlags: 0
