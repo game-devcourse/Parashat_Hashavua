@@ -19,8 +19,11 @@ public class WarningOnTrigger : MonoBehaviour
     {
         if(other.tag == triggerTag)
         {
-            scrol.enabled = true;
-            dialogueText.text = sentenceToDisplay;
+            if(scrol != null)
+                scrol.enabled = true;
+            if(dialogueText != null)
+                dialogueText.text = sentenceToDisplay;
+            
             GameObject PushingObject = GameObject.FindWithTag(triggerTag);
             PushingObject.transform.position -= pushing;
         }
@@ -30,8 +33,10 @@ public class WarningOnTrigger : MonoBehaviour
     {
         if(other.tag == triggerTag)
         {
-            scrol.enabled = false;
-            dialogueText.text = "";
+            if(scrol != null)
+                scrol.enabled = false;
+            if(dialogueText != null)
+                dialogueText.text = "";
         }
     }
 
