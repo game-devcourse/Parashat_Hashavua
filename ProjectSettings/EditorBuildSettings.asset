@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Non Parasha Scenes/FinishParasha.unity
     guid: 4cd0ba548f4bf1f4fbb3355972ce530d
+  - enabled: 1
+    path: Assets/Scenes/Non Parasha Scenes/VayegashStart.unity
+    guid: fb32793d754d9c0458b626cdef730c72
   m_configObjects: {}
