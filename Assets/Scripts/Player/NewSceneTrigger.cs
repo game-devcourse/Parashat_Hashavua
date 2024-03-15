@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This script is responsible to start a new scene when 2 objects collides
 public class NewSceneTrigger : MonoBehaviour
 {
     [SerializeField] string sceneName;

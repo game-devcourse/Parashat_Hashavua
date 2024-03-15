@@ -10,7 +10,7 @@ public class ItemsCollector : ObjectCollector
     [SerializeField] GameObject coinManager;
     [SerializeField] GameObject winText;
     [SerializeField] GameObject gameoverFalseCollectText;
-    [SerializeField] int coinsWin;
+    [SerializeField] int coinsWin; // how many coins the player win in the game
 
     void Start()
     {
@@ -30,6 +30,7 @@ public class ItemsCollector : ObjectCollector
             wrongScoreField.AddNumber(1);
         }
 
+        //Manage the lose state
         if(wrongScoreField.GetNumber() >= 3)
         {
             //show game over screen
@@ -38,6 +39,7 @@ public class ItemsCollector : ObjectCollector
             timer.stopTime();
         }
 
+        //Manage the win state
         if(scoreField.GetNumber() >= 10)
         {
             //show win screen
@@ -49,6 +51,7 @@ public class ItemsCollector : ObjectCollector
             } else {
                 Debug.LogWarning("coinManager is not assigned.");
             }
+            //Once the game is over, whether the player won or lose its mover component will disable so he won't be able to move
             GetComponent<KeyboardMover>().enabled = false;
             timer.stopTime();
         }

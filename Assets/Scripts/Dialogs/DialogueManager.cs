@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public Image scrol;
     //We uses queue for the FIFO attribute, this queue holds the lines that needs to be display
     private Queue<DialogueLine> sentences;
-    private DialogueLine lineToDisplay;
+    private DialogueLine lineToDisplay; //to hold the line that is now displaying
 
     void Awake()
     {
@@ -88,6 +88,8 @@ public class DialogueManager : MonoBehaviour
         {
             nameText.text = lineToDisplay.name;
         }
+        
+        //before displaying the next sentence stop all the coroutines that is active to start a new one
         StopAllCoroutines();
         if(lineToDisplay.dialogEvent.eventType == "Option Answers")
         {
@@ -95,11 +97,12 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            //StartCoroutine(TypeSentence(lineToDisplay.sentence));
+            //StartCoroutine(TypeSentence(lineToDisplay.sentence)); //option of typing the sentence letter by letter
             dialogueText.text = lineToDisplay.sentence;
         }
     }
 
+    //option of typing the sentence letter by letter
     // IEnumerator TypeSentence(string sentence)
     // {
     //     //we use the IEnumerator so we can use the WaitForSeconds so we can display the letters one by one
@@ -160,7 +163,7 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.LogWarning("Component type not found: " + lineToDisplay.dialogEvent.componentName);
         }
-        lineToDisplay = null;
+        lineToDisplay = null; //to make sure next time the dialogue restart it wont play the last event again
         EnableDialogue();
     }
 
@@ -221,9 +224,9 @@ public class DialogueManager : MonoBehaviour
         FindObjectOfType<StartTalking>().OptionAnswersEventStart();
         foreach(OptionAnswer answer in lineToDisplay.dialogEvent.myAnswers)
         {
-            answer.btn.onClick.RemoveAllListeners();
+            answer.btn.onClick.RemoveAllListeners(); //to get an empty button to perform the current options on it
             answer.btn.GetComponentInChildren<TextMeshProUGUI>().text = answer.txt;
-            answer.btn.interactable = true;
+            answer.btn.interactable = true; //to make sure the player can press the button
         }
 
         foreach (OptionAnswer answer in lineToDisplay.dialogEvent.myAnswers)
@@ -307,6 +310,7 @@ public class DialogueManager : MonoBehaviour
         // Check if the GameObject was found
         if (ParentObject != null && ChildObject != null)
         {
+            //setting the objects to look at the same direction
             if(ParentObject.transform.localScale.x < 0 && ChildObject.transform.localScale.x > 0)
             {
                 ChildObject.transform.localScale = new Vector3(-ChildObject.transform.localScale.x,ChildObject.transform.localScale.y,1f);
@@ -315,6 +319,8 @@ public class DialogueManager : MonoBehaviour
             {
                 ChildObject.transform.localScale = new Vector3(ChildObject.transform.localScale.x,ChildObject.transform.localScale.y,1f);
             }
+
+            //attach the child to the wanted parent
             ChildObject.transform.SetParent(ParentObject.transform);
         }
         else

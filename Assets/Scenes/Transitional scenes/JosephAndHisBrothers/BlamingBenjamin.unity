@@ -560,6 +560,14 @@ MonoBehaviour:
   name: "\u05D4\u05E9\u05D5\u05DE\u05E8\u05D9\u05DD"
   scrol: {fileID: 2141522774}
   sceneName: FinishParasha
+  soldiers:
+  - {fileID: 594442257}
+  - {fileID: 1039519391}
+  - {fileID: 1895498621}
+  takenObject: {fileID: 1036492578}
+  goBackPoint: {fileID: 1879709352}
+  speed: 4
+  talk: {fileID: 248015383}
 --- !u!4 &333166833
 Transform:
   m_ObjectHideFlags: 0

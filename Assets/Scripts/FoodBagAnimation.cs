@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class FoodBagAnimation : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class FoodBagAnimation : MonoBehaviour
     public string name;
     public Image scrol;
     public string sceneName;
-
+    public GameObject[] soldiers;
+    public GameObject takenObject;
+    public Transform goBackPoint;
+    public float speed;
+    public StartTalking talk;
     private Vector3[] positionBags;
 
     void Start()
@@ -31,6 +36,7 @@ public class FoodBagAnimation : MonoBehaviour
 
     public void moveBags()
     {
+        talk.Disable();
         Debug.Log("the bags are start moving");
         StartCoroutine(GoCheck());
     }
@@ -50,8 +56,18 @@ public class FoodBagAnimation : MonoBehaviour
         scrol.enabled = true; 
         textDisplay.text = sentence;
         nameDisplay.text = name;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
+        foodBags[2].transform.position = positionBags[2];
+        yield return new WaitForSeconds(1f);
 
+        takenObject.transform.SetParent(soldiers[0].transform);
+        takenObject.transform.position = checkPoint.position;
+        foreach(GameObject soldier in soldiers)
+        {
+            soldier.transform.position = Vector3.MoveTowards(soldier.transform.position, goBackPoint.position, speed * Time.deltaTime);
+        }
+        yield return new WaitForSeconds(3f);
+        
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//This script is meant to manage the starting and the duration of a conversation 
+//it responsible to create the dialogue triger and manager ans call for the displaying of the sentences in each input action.
 public class StartTalking : MonoBehaviour
 {
     [SerializeField] InputAction nextSentence = new InputAction(type: InputActionType.Button);
@@ -20,6 +22,7 @@ public class StartTalking : MonoBehaviour
         nextSentence.Disable();
     }
 
+    //enable and disable the option to talk
     public void Enable()
     {
         canTalk = true;
@@ -32,6 +35,7 @@ public class StartTalking : MonoBehaviour
         dialogueManager.UnDisplayScrol();
     }
 
+    //managing the option answers event
     public void OptionAnswersEventStart()
     {
         canTalk = false; // Disable ability to advance dialogue

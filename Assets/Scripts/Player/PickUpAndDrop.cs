@@ -7,6 +7,7 @@ using System;
 
 
 //This method was taken from https://www.youtube.com/watch?v=yFKg8qVclBk
+//Responsible to pick up an item and drop it in a wanted location
 public class PickUpAndDrop : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI dropText;

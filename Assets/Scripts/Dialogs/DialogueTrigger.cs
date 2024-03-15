@@ -24,17 +24,18 @@ public class DialogueLine
     public DialogueEvent dialogEvent;
 }
 
+//A dialogue event class to handle all kind of evvents
 [System.Serializable]
 public class DialogueEvent
 {
     public string eventType;
-    public string sceneName;
-    public string objectComponent;
-    public string componentName;
-    public string functionName;
-    public string ParentTag;
-    public string ChildTag;
-    public OptionAnswer[] myAnswers;
+    public string sceneName; //-> New Scene event
+    public string objectComponent; //-> Enable Component event, -> Disable Component event, -> End Conversation event
+    public string componentName; //-> Enable Component event, -> Disable Component event, -> End Conversation event
+    public string functionName; //-> Enable Component event, -> Disable Component event
+    public string ParentTag; //-> Attach Objects event
+    public string ChildTag; //-> Attach Objects event
+    public OptionAnswer[] myAnswers; //-< Option Answers event
 }
 
 //a new struct to contain the buttons the struct will be build out of UIbutton, 
