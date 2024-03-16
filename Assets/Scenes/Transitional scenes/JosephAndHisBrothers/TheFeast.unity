@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -449, y: -219}
+  m_AnchoredPosition: {x: -434.1, y: -155.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4743953
@@ -289,7 +289,7 @@ MonoBehaviour:
   startGameText: {fileID: 0}
   timer: {fileID: 0}
   controllerGame: {fileID: 0}
-  music: {fileID: 0}
+  music: {fileID: 1060341925}
 --- !u!4 &23481033
 Transform:
   m_ObjectHideFlags: 0
@@ -411,8 +411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -458.58847, y: -285.97116}
-  m_SizeDelta: {x: 778.2479, y: 504.8784}
+  m_AnchoredPosition: {x: -423.86, y: -231.1055}
+  m_SizeDelta: {x: 847.71, y: 614.6096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &141416036
 MonoBehaviour:
@@ -1383,7 +1383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -455, y: -293}
+  m_AnchoredPosition: {x: -425.3, y: -217.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364184396
@@ -77764,7 +77764,9 @@ MonoBehaviour:
     - name: "\u05DE\u05E9\u05D9\u05DE\u05D4"
       sentence: "\u05D0\u05D7\u05D9\u05DA \u05D4\u05D2\u05D9\u05E2\u05D5 \u05E2\u05DD
         \u05D1\u05E0\u05D9\u05DE\u05D9\u05DF \u05DC\u05DA \u05E7\u05D1\u05DC \u05D0\u05EA
-        \u05E4\u05E0\u05D9\u05D4\u05DD."
+        \u05E4\u05E0\u05D9\u05D4\u05DD.                                   \u05DC\u05D7\u05E5
+        \u05E2\u05DC \u05DE\u05E7\u05E9 \u05D4\u05E8\u05D5\u05D5\u05D7 \u05DB\u05D3\u05D9
+        \u05DC\u05D4\u05DE\u05E9\u05D9\u05DA."
       dialogEvent:
         eventType: End Conversation
         sceneName: 

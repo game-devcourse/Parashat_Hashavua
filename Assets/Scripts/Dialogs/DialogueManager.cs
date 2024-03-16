@@ -39,6 +39,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        dialogueText.text = "";
+        nameText.text = "";
         //each time before we want to display the next sentence we want to check if the sentence that is now displaying has an event to do
         if(lineToDisplay != null)
         {

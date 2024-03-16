@@ -35,7 +35,7 @@ public class ItemsCollector : ObjectCollector
         {
             //show game over screen
             gameoverFalseCollectText.SetActive(true);
-            GetComponent<KeyboardMoverByTile>().enabled = false;
+            GetComponent<KeyboardMover>().enabled = false;
             timer.stopTime();
         }
 
