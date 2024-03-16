@@ -75,6 +75,7 @@ public class TutorialNPC : TargetMover
 
         dialoguePoints[pointIndex].isDone = true;
         isExplaining = false;
+        yield return new WaitForSeconds(2f);
         MoveToNextPoint();
     }
 

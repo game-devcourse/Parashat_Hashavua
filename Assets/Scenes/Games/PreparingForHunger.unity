@@ -2923,6 +2923,7 @@ MonoBehaviour:
   startGameText: {fileID: 480051437}
   timer: {fileID: 261159688}
   controllerGame: {fileID: 146123795}
+  music: {fileID: 623368260}
 --- !u!4 &420933952
 Transform:
   m_ObjectHideFlags: 0
@@ -7687,7 +7688,7 @@ MonoBehaviour:
   m_Follow: {fileID: 904825808}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3.75
+    OrthographicSize: 5.02
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8280,7 +8281,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 5.02
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
