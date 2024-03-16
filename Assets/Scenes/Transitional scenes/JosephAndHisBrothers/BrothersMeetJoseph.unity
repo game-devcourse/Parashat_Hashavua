@@ -2243,6 +2243,7 @@ MonoBehaviour:
     m_Flags: 0
   dialogue: {fileID: 1726239293}
   dialogueManager: {fileID: 1915812564}
+  dialogueText: {fileID: 1169542435}
 --- !u!4 &1726239295
 Transform:
   m_ObjectHideFlags: 0

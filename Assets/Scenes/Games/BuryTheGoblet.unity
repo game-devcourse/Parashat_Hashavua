@@ -5938,7 +5938,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: scene9
+          m_StringArgument: GoBackToCnaan
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1403082649
@@ -7972,7 +7972,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BuryTheTrophy
+          m_StringArgument: BuryTheGoblet
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1928799694

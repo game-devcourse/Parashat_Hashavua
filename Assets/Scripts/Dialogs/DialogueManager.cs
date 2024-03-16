@@ -268,11 +268,11 @@ public class DialogueManager : MonoBehaviour
                 answerO.btn.interactable = false;
             }
 
-            StartCoroutine(DisplayWrongAnswerAndReenableButtons(answer.wrongAnswerResponse));
+            StartCoroutine(DisplayWrongAnswerAndReenableButtons(answer));
         }
     }
 
-    private IEnumerator DisplayWrongAnswerAndReenableButtons(string wrongAnswerResponse)
+    private IEnumerator DisplayWrongAnswerAndReenableButtons(OptionAnswer answer)
     {
         dialogueText.text = "";
         foreach (OptionAnswer answerO in lineToDisplay.dialogEvent.myAnswers)
@@ -282,7 +282,7 @@ public class DialogueManager : MonoBehaviour
 
         // Display wrong answer response
         //yield return StartCoroutine(TypeSentence(wrongAnswerResponse));
-        dialogueText.text = wrongAnswerResponse;
+        dialogueText.text = answer.wrongAnswerResponse;
         
         // Wait for a while after displaying wrong answer response
         yield return new WaitForSecondsRealtime(2f);
@@ -299,6 +299,26 @@ public class DialogueManager : MonoBehaviour
         {
             nameText.text = lineToDisplay.name;
         }
+
+        if(answer.eventType == "New Scene")
+            NewSceneEvent();
+
+        if(answer.eventType == "End Conversation")
+        {
+            EndConversationEvent();
+        }
+
+        if(answer.eventType == "Disable Component")
+            DisableComponentEvent();
+
+        if(answer.eventType == "Enable Component")
+            EnableComponentEvent();
+
+        if(answer.eventType == "Attach Objects")
+            AttachObjectsEvant();
+        
+        if(answer.eventType == "Option Answers")
+            Debug.Log("No such event exixt.");
     }
 
     private void AttachObjectsEvant()

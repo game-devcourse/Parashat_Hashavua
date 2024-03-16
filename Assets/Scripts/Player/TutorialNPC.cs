@@ -63,13 +63,14 @@ public class TutorialNPC : TargetMover
             dialogueText.text = ""; // Clear previous text
         foreach(string sentence in dialoguePoints[pointIndex].sentences)
         {
-            foreach (char letter in sentence.ToCharArray())
-            {
-                dialogueText.text += letter;
-                yield return new WaitForSeconds(0.1f);
-            }
+            // foreach (char letter in sentence.ToCharArray())
+            // {
+            //     dialogueText.text += letter;
+            //     yield return new WaitForSeconds(0.1f);
+            // }
+            dialogueText.text += sentence;
             dialogueText.text += "\n";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
         }
 
         dialoguePoints[pointIndex].isDone = true;

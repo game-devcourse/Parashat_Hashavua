@@ -35,13 +35,14 @@ public class DialogueEvent
     public string functionName; //-> Enable Component event, -> Disable Component event
     public string ParentTag; //-> Attach Objects event
     public string ChildTag; //-> Attach Objects event
-    public OptionAnswer[] myAnswers; //-< Option Answers event
+    public OptionAnswer[] myAnswers; //-> Option Answers event
 }
 
 //a new struct to contain the buttons the struct will be build out of UIbutton, 
 //a boolean attribute that says if this is the correct answer or not(for option which there is a right answer),
 //the text that should be appeard on the button,
-//and what will be appear if the player will choose the wrong answer.
+//what will be appear if the player will choose the wrong answer,
+//and an event type to manage what will happen after a wrong answer was pressed. The event is the same as the event types above except for the Option Answers event.
 [System.Serializable]
 public class OptionAnswer
 {
@@ -49,6 +50,7 @@ public class OptionAnswer
     public bool isTheRightAnswer;
     public string txt;
     public string wrongAnswerResponse;
+    public string eventType;
 }
 
 //a dialogue object to hold all the lines

@@ -8,6 +8,7 @@ public class TalkOnTrigger : MonoBehaviour
    [SerializeField] GameObject DialogueObject;
    [SerializeField] bool isAllDialogueOnTrigger;
 
+
     void Awake()
     {
         if(isAllDialogueOnTrigger)

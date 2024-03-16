@@ -289,6 +289,7 @@ MonoBehaviour:
   startGameText: {fileID: 0}
   timer: {fileID: 0}
   controllerGame: {fileID: 0}
+  music: {fileID: 0}
 --- !u!4 &23481033
 Transform:
   m_ObjectHideFlags: 0
@@ -77745,6 +77746,7 @@ MonoBehaviour:
     m_Flags: 0
   dialogue: {fileID: 606471332}
   dialogueManager: {fileID: 422898752}
+  dialogueText: {fileID: 364184396}
 --- !u!114 &606471332
 MonoBehaviour:
   m_ObjectHideFlags: 0

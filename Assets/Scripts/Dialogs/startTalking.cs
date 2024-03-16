@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 //This script is meant to manage the starting and the duration of a conversation 
 //it responsible to create the dialogue triger and manager ans call for the displaying of the sentences in each input action.
@@ -10,6 +11,7 @@ public class StartTalking : MonoBehaviour
     [SerializeField] InputAction nextSentence = new InputAction(type: InputActionType.Button);
     [SerializeField] DialogueTrigger dialogue;
     [SerializeField] DialogueManager dialogueManager;
+    [SerializeField] TextMeshProUGUI dialogueText = null;
     private bool canTalk = true;
 
     void OnEnable()
@@ -27,12 +29,14 @@ public class StartTalking : MonoBehaviour
     {
         canTalk = true;
         dialogueManager.displayScrol();
+        dialogueText.text = "הקש על רווח כדי להמשיך.";
     }
 
     public void Disable()
     {
         canTalk = false;
         dialogueManager.UnDisplayScrol();
+        dialogueText.text = "";
     }
 
     //managing the option answers event

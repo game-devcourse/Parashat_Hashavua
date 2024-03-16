@@ -359,7 +359,7 @@ MonoBehaviour:
       m_Action: Move
       m_Flags: 8
     m_Flags: 0
-  moveSpeed: 5
+  moveSpeed: 6
   tilemap: {fileID: 2058217136}
   allowedTiles: {fileID: 1044550844}
 --- !u!50 &368973882
@@ -2292,7 +2292,7 @@ MonoBehaviour:
         ChildTag: 
         myAnswers: []
     - name: "\u05E4\u05E8\u05E2\u05D4"
-      sentence: "\u05E9\u05DE\u05E2\u05EA\u05D9 \u05E2\u05DC\u05D9\u05D9\u05DA, \u05D7\u05DC\u05DE\u05EA\u05D9
+      sentence: "\u05E9\u05DE\u05E2\u05EA\u05D9 \u05E2\u05DC\u05D9\u05DA, \u05D7\u05DC\u05DE\u05EA\u05D9
         2 \u05D7\u05DC\u05D5\u05DE\u05D5\u05EA \u05D1\u05D7\u05DC\u05D5\u05DD \u05D4\u05E8\u05D0\u05E9\u05D5\u05DF
         7 \u05E4\u05E8\u05D5\u05EA \u05E8\u05D6\u05D5\u05EA \u05D0\u05D5\u05DB\u05DC\u05D5\u05EA
         7 \u05E4\u05E8\u05D5\u05EA \u05E9\u05DE\u05E0\u05D5\u05EA"
@@ -2306,9 +2306,9 @@ MonoBehaviour:
         ChildTag: 
         myAnswers: []
     - name: "\u05E4\u05E8\u05E2\u05D4"
-      sentence: "\u05D1\u05D7\u05DC\u05D5\u05DD \u05D4\u05E9\u05E0\u05D9 \u05E9\u05D1\u05E2
-        \u05E9\u05D9\u05D1\u05D5\u05DC\u05D9\u05DD \u05E8\u05D6\u05D9\u05DD \u05D0\u05D5\u05DB\u05DC\u05D9\u05DD
-        \u05E9\u05D1\u05E2 \u05E9\u05D9\u05D1\u05D5\u05DC\u05D9\u05DD \u05E9\u05DE\u05E0\u05D9\u05DD"
+      sentence: "\u05D1\u05D7\u05DC\u05D5\u05DD \u05D4\u05E9\u05E0\u05D9 7 \u05E9\u05D9\u05D1\u05D5\u05DC\u05D9\u05DD
+        \u05E8\u05D6\u05D9\u05DD \u05D0\u05D5\u05DB\u05DC\u05D9\u05DD 7 \u05E9\u05D9\u05D1\u05D5\u05DC\u05D9\u05DD
+        \u05E9\u05DE\u05E0\u05D9\u05DD"
       dialogEvent:
         eventType: 
         sceneName: 
@@ -2350,6 +2350,7 @@ MonoBehaviour:
             7 \u05E9\u05E0\u05D5\u05EA \u05E9\u05D5\u05D1\u05E2 \u05D57 \u05E9\u05E0\u05D5\u05EA
             \u05E8\u05E2\u05D1."
           wrongAnswerResponse: 
+          eventType: 
         - btn: {fileID: 2129583364}
           isTheRightAnswer: 0
           txt: "\u05D1. 7 \u05D1\u05E0\u05D5\u05EA \u05D9\u05D5\u05D5\u05DC\u05D3\u05D5
@@ -2358,13 +2359,17 @@ MonoBehaviour:
           wrongAnswerResponse: "\u05DE\u05D4 \u05E4\u05EA\u05D0\u05D5\u05DD!!!! \u05DC\u05D0
             \u05D4\u05E9\u05EA\u05DB\u05E0\u05E2\u05EA\u05D9, \u05D4\u05E4\u05D9\u05EA\u05E8\u05D5\u05DF
             \u05DC\u05D0 \u05D8\u05D5\u05D1."
+          eventType: 
         - btn: {fileID: 417087875}
           isTheRightAnswer: 0
           txt: "\u05D2. \u05DC\u05E4\u05E8\u05E2\u05D4 \u05D9\u05E9 7 \u05E9\u05E0\u05D9\u05DD
             \u05DC\u05D7\u05D9\u05D5\u05EA."
           wrongAnswerResponse: "\u05DE\u05D4 \u05E4\u05EA\u05D0\u05D5\u05DD!!!! \u05DC\u05D0
             \u05D4\u05E9\u05EA\u05DB\u05E0\u05E2\u05EA\u05D9, \u05D4\u05E4\u05D9\u05EA\u05E8\u05D5\u05DF
+            \u05DC\u05D0 \u05D8\u05D5\u05D1.\u05DE\u05D4 \u05E4\u05EA\u05D0\u05D5\u05DD!!!!
+            \u05DC\u05D0 \u05D4\u05E9\u05EA\u05DB\u05E0\u05E2\u05EA\u05D9, \u05D4\u05E4\u05D9\u05EA\u05E8\u05D5\u05DF
             \u05DC\u05D0 \u05D8\u05D5\u05D1."
+          eventType: 
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05D4' \u05D1\u05D0 \u05DC\u05D4\u05E8\u05D0\u05D5\u05EA \u05DC\u05E4\u05E8\u05E2\u05D4
         \u05DB\u05D9 \u05E9\u05D1\u05E2 \u05E9\u05E0\u05D5\u05EA \u05E9\u05D5\u05D1\u05E2
@@ -2410,17 +2415,20 @@ MonoBehaviour:
             \u05D1\u05D4 \u05D0\u05D9\u05DF \u05E8\u05E2\u05D1."
           wrongAnswerResponse: "\u05DE\u05D4 \u05E4\u05EA\u05D0\u05D5\u05DD!!!! \u05DC\u05E2\u05D5\u05DC\u05DD
             \u05DC\u05D0, \u05EA\u05D7\u05E9\u05D5\u05D1 \u05E9\u05D5\u05D1."
+          eventType: 
         - btn: {fileID: 2129583364}
           isTheRightAnswer: 1
           txt: "\u05D1. \u05DC\u05DE\u05E0\u05D5\u05EA \u05E4\u05E7\u05D9\u05D3\u05D9\u05DD
             \u05E9\u05D9\u05D0\u05E1\u05E4\u05D5 \u05D0\u05D5\u05DB\u05DC."
           wrongAnswerResponse: 
+          eventType: 
         - btn: {fileID: 417087875}
           isTheRightAnswer: 0
           txt: "\u05D2. \u05D0\u05D9\u05DF \u05DE\u05D4 \u05DC\u05E2\u05E9\u05D5\u05EA."
           wrongAnswerResponse: "\u05DE\u05D4 \u05E4\u05EA\u05D0\u05D5\u05DD!!!! \u05D4\u05EA\u05E9\u05D5\u05D1\u05D4
             \u05DC\u05D0 \u05D8\u05D5\u05D1\u05D4, \u05EA\u05D7\u05E9\u05D5\u05D1
             \u05E9\u05D5\u05D1."
+          eventType: 
     - name: "\u05D9\u05D5\u05E1\u05E3"
       sentence: "\u05EA\u05DE\u05E0\u05D4 \u05E4\u05E7\u05D9\u05D3\u05D9\u05DD \u05E9\u05D9\u05D4\u05D9\u05D5
         \u05D0\u05D7\u05E8\u05D0\u05D9\u05DD \u05DC\u05D0\u05D2\u05D9\u05E8\u05EA
@@ -2481,6 +2489,7 @@ MonoBehaviour:
     m_Flags: 0
   dialogue: {fileID: 1390104178}
   dialogueManager: {fileID: 1691238338}
+  dialogueText: {fileID: 2122803542}
 --- !u!4 &1390104182
 Transform:
   m_ObjectHideFlags: 0
